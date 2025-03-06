@@ -56,6 +56,8 @@
     feh
     fzf
     nautilus
+    gammastep
+    geoclue2
     gnome-firmware
     gnugrep
     grim

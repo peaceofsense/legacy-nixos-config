@@ -29,6 +29,14 @@
     options v4l2loopback exclusive_caps=1 card_label="Virtual Webcam"
   '';
 
+  # Swap fileSystems
+  swapDevices = [
+    { device = "/swapfile";
+      size = 8192 * 2; # MB
+      priority = 16;
+    }
+  ];
+
 
   # Disable waiting for NetworkManager to be online (speeds up boot)
   systemd.services.NetworkManager-wait-online.enable = false;

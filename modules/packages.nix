@@ -18,6 +18,7 @@
 
     # Office and Productivity
     anki
+    drawio
     jabref
     libreoffice-still
     localsend
@@ -58,6 +59,7 @@
     nautilus
     gammastep
     geoclue2
+    gnome-calculator
     gnome-firmware
     gnugrep
     grim
@@ -78,7 +80,6 @@
     pamixer
     parted
     polkit_gnome
-    qalculate-gtk
     rar
     ripgrep
     ripgrep-all

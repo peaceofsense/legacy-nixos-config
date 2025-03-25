@@ -25,7 +25,10 @@
     nixosConfigurations = {
       monolith = lib.nixosSystem { # System Name
         inherit system;        
-	      modules = [ ./configuration.nix solaar.nixosModules.default ];
+	      modules = [ 
+            ./configuration.nix 
+            solaar.nixosModules.default 
+          ];
         specialArgs = {
           inherit username;
           inherit pkgsUnstable;

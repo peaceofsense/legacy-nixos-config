@@ -56,6 +56,7 @@
     ddcui
     feh
     fzf
+    fprintd
     nautilus
     gammastep
     geoclue2
@@ -96,6 +97,7 @@
     tree
     unrar
     unzip
+    usbutils
     wget
     wl-clipboard
     xclip

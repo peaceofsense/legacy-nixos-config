@@ -5,7 +5,6 @@
   environment.systemPackages = 
     (with pkgsUnstable; [
       # Unstable here
-      zed-editor
     ])
 
     ++
@@ -120,8 +119,6 @@
     # Web Browsing
     brave
     mullvad-browser
-    vivaldi
-    vivaldi-ffmpeg-codecs
 
     # Development Tools
     conda

@@ -83,6 +83,7 @@
     rar
     ripgrep
     ripgrep-all
+    rofimoji
     rofi-wayland
     samba
     sl

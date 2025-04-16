@@ -55,7 +55,8 @@
     arc-theme
     adwaita-qt
     graphite-gtk-theme
-    orchis-theme
+    matcha-gtk-theme
+    pop-gtk-theme
 
     # Icon Themes
     papirus-icon-theme

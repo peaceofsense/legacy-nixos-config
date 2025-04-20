@@ -18,6 +18,7 @@
     # Office and Productivity
     anki
     drawio
+    fiji
     jabref
     libreoffice-still
     localsend
@@ -76,6 +77,8 @@
     kittysay
     libnotify
     libstdcxx5
+    libtiff
+    loupe
     neovim
     pamixer
     parted

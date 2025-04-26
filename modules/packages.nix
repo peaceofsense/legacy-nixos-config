@@ -26,6 +26,7 @@
     ollama
     kdePackages.okular    
     # opentabletdriver
+    mame
     megasync
     pandoc
     pdfarranger
@@ -33,6 +34,7 @@
     texliveFull
     texstudio
     thunderbird
+    xgalagapp
     xournalpp
     zathura
     zotero

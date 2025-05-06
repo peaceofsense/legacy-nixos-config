@@ -5,6 +5,7 @@
   environment.systemPackages = 
     (with pkgsUnstable; [
       # Unstable here
+    ags
     ])
 
     ++
@@ -40,8 +41,10 @@
     zotero
 
     # Disk and Filesystem Utilities
+    # ags
     cifs-utils
     exfatprogs
+    eww
     gparted
     hfsprogs
     ntfs3g

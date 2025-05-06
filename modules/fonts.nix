@@ -64,6 +64,5 @@
     breeze-icons
     gnome-themes-extra
   ];
-
   
 }

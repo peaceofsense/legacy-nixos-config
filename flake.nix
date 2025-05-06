@@ -1,6 +1,6 @@
 {
 
-  description = "Working flake?";
+  description = "yes";
   
   inputs = {
     nixpkgsStable.url = "nixpkgs/nixos-24.11"; # Change this to update version
@@ -11,9 +11,17 @@
       #url = "github:Svenum/Solaar-Flake/main"; # Uncomment line for latest unstable version
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
+    astal = {
+      url = "github:aylur/astal";
+      inputs.nixpkgs.follows = "nixpkgsUnstable";
+    };
+    ags = {
+      url = "github:aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgsUnstable";
+    };
   };
   
-  outputs = { self, nixpkgsStable, nixpkgsUnstable, home-manager, solaar,... } @ inputs:
+  outputs = { self, nixpkgsStable, nixpkgsUnstable, astal, ags, solaar,... } @ inputs:
     let
       lib = nixpkgsStable.lib; # It is like pass nixpkgs to this var
       system = "x86_64-linux";

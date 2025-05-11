@@ -30,6 +30,20 @@
       pkgsUnstable = nixpkgsUnstable.legacyPackages.${system};
       username = "peaceofsense";
     in {
+    packages.${system}.default = ags.lib.bundle { 
+      inherit pkgsUnstable;
+      src = ./.;
+      name = "my-shell"; # name of executable
+      entry = "app.ts";
+      gtk4 = false;
+
+      # additional libraries and executables to add to gjs' runtime
+      extraPackages = [
+        #ags.packages.${system}.battery
+        # pkgs.fzf
+      ];
+    };
+
     nixosConfigurations = {
       monolith = lib.nixosSystem { # System Name
         inherit system;        
@@ -40,6 +54,7 @@
         specialArgs = {
           inherit username;
           inherit pkgsUnstable;
+          inherit astal;
         };
       };
     };

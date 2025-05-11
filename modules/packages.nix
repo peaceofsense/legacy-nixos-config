@@ -1,4 +1,4 @@
-{ pkgs, pkgsUnstable, ... }: {
+{ pkgs, pkgsUnstable, astal, ... }: {
 
   # List packages installed in system profile.
 
@@ -6,6 +6,8 @@
     (with pkgsUnstable; [
       # Unstable here
     ags
+    astal.packages.${pkgsUnstable.system}.default
+
     ])
 
     ++
@@ -116,9 +118,9 @@
     # System Customization
     bibata-cursors
     eyedropper
-    fastfetch
     gnome-control-center
     gnomeExtensions.gsconnect
+    neofetch
     nwg-look
     pywal
     starship

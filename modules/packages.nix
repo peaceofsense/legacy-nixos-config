@@ -7,7 +7,7 @@
       # Unstable here
     ags
     astal.packages.${pkgsUnstable.system}.default
-
+    yazi
     ])
 
     ++
@@ -185,7 +185,6 @@
     cmatrix
     cowsay
     wttrbar
-    yazi
     dotnet-runtime
     #(lutris.override {
     #   extraPkgs = pkgs: [

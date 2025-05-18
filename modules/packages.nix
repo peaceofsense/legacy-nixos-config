@@ -132,6 +132,7 @@
     mullvad-browser
 
     # Development Tools
+    vscode
     conda
     gcc
     geany

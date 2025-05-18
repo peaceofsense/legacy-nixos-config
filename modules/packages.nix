@@ -67,9 +67,11 @@
     nautilus
     gammastep
     geoclue2
+    glib
     gnome-calculator
     gnome-firmware
     gnugrep
+    gsettings-desktop-schemas
     grim
     gvfs
     gnome.gvfs
@@ -112,6 +114,7 @@
     wl-clipboard
     xclip
     xdg-utils
+    zed-editor
     zip
     zoxide
 

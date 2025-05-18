@@ -118,6 +118,8 @@
     in ["${automount_opts},credentials=/etc/nixos/smb-secrets"];
   };
 
+  xdg.portal.config.common.default = [ "gtk" ];
+
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [

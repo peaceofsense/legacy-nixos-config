@@ -50,4 +50,6 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
    };
+
+   programs.dconf.enable = true;
 }

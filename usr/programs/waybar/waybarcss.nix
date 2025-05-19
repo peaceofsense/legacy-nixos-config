@@ -2,9 +2,10 @@
   imports = [
     ./mocha.nix
   ];
+
   programs.waybar.style = ''
     * {
-      font-family: JetBrainsMono NF;
+      font-family: "JetBrainsMono NF", "Font Awesome 6 Free";
       font-size: 14px;
       min-height: 0;
     }
@@ -13,158 +14,151 @@
       background: @base;
       color: @text;
       margin: 5px 5px;
+      border-radius: 8px;
+      border: 1px solid @surface0;
     }
 
     #workspaces {
-      margin: 5px;
-      margin-left: 1rem;
+      margin: 5px 1rem;
     }
 
     #workspaces button {
-      color: @surface1;
+      background: transparent;
+      color: @overlay1;
+      padding: 4px 8px;
+      margin: 2px;
+      border-radius: 6px;
     }
 
     #workspaces button.active {
+      background: @surface0;
       color: @green;
-      border-top: 2px solid @red;
-      border-radius: 0;
+      border: 2px solid @green;
     }
 
     #workspaces button:hover {
-      color: @green;
+      background: @surface1;
+      color: @teal;
     }
 
     #hyprland-workspaces {
-      border-radius: 1rem;
-      margin: 5px;
       background-color: @mantle;
+      border-radius: 10px;
+      padding: 4px;
+      margin: 5px;
     }
 
     #hyprland-workspaces button {
-      color: @surface1;
+      background: transparent;
+      color: @overlay1;
       border-radius: 1rem;
       padding: 0.4rem;
+      margin: 0 2px;
     }
 
     #hyprland-workspaces button.active {
       color: @blue;
-      border-radius: 1rem;
+      background: @surface1;
     }
 
     #hyprland-workspaces button:hover {
       color: @teal;
-      border-radius: 1rem;
+      background: @surface2;
     }
 
     #hyprland-window {
-      color: @text;
-      border-radius: 1rem;
+      color: @subtext1;
       margin-left: 2rem;
     }
 
     #network, #cpu, #memory {
-      color: @surface2;
-      margin-left: 8px;
-      margin-right: 8px;
+      color: @lavender;
+      margin: 0 8px;
     }
 
     #bluetooth {
-      color: @teal;
-      border-radius: 1rem;
-      margin: 5px;
+      color: @sky;
+      margin: 0 8px;
     }
 
     #hyprland-language {
       color: @text;
-      border-radius: 1rem;
-      margin-left: 1rem;
-      margin-right: 1rem;
+      background: @surface0;
+      border-radius: 6px;
+      padding: 2px 8px;
+      margin: 0 8px;
     }
 
     #battery {
-      color: @teal;
-      margin-left: 8px;
-      margin-right: 1rem;
+      color: @green;
+      margin: 0 8px;
     }
 
     #battery.charging {
       color: @yellow;
-      margin-left: 8px;
-      margin-right: 1rem;
     }
 
     #battery.warning:not(.charging) {
       color: @red;
-      margin-left: 8px;
-      margin-right: 1rem;
     }
 
     #backlight {
-      color: @text;
-      border-radius: 0;
+      color: @peach;
       margin-left: 10px;
     }
 
     #pulseaudio {
-      color: @blue;
-      margin-left: 8px;
-      margin-right: 8px;
+      color: @mauve;
+      margin: 0 8px;
     }
 
     #pulseaudio#microphone {
-      color: @red;
-      margin-left: 8px;
-      margin-right: 8px;
+      color: @flamingo;
+      margin: 0 8px;
     }
 
     #clock {
+      font-family: "Fira Code Nerd Font", monospace;
       color: @blue;
-      font-family: Fira Code Nerd Font;
-      border-radius: 0px 1rem 1rem 0px;
-      margin-left: 1rem;
-      margin-right: 8px;
+      margin: 0 8px;
+      padding: 0 10px;
     }
 
     #custom-music {
-      color: @mauve;
-      border-radius: 1rem;
+      color: @pink;
+      padding: 0 8px;
     }
 
     #custom-lock {
-      border-radius: 1rem 0px 0px 1rem;
       color: @lavender;
+      padding: 0 8px;
+      border-radius: 10px 0 0 10px;
     }
 
     #custom-power {
-      margin-right: 8px;
-      border-radius: 0px 1rem 1rem 0px;
       color: @red;
+      padding: 0 8px;
+      border-radius: 0 10px 10px 0;
     }
 
-    #tray,
-    #custom-weather,
-    #custom-notification {
-      margin-left: 8px;
-      margin-right: 8px;
+    #tray, #custom-weather, #custom-notification {
+      margin: 0 8px;
+      color: @subtext0;
     }
 
     #keyboard-state label {
-      color: @surface0;
-      margin-left: 8px;
-      margin-right: 8px;
+      color: @overlay1;
+      margin: 0 8px;
     }
 
     #keyboard-state label.locked {
       color: @text;
-      margin-left: 8px;
-      margin-right: 8px;
     }
 
     #custom-nixicon {
-      font-size: 22px;
+      font-size: 20px;
       color: @green;
-      margin-left: 8px;
-      margin-right: 8px;
+      margin: 0 8px;
     }
   '';
 }

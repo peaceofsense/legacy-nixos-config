@@ -1,6 +1,7 @@
 {
   imports = [
     ./waybar
+    ./yazi.nix
   ];
 
   programs.btop = {

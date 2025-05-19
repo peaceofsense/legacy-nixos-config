@@ -1,3 +1,4 @@
+{
 programs.waybar.settings = {
   mainBar = {
     layer = "bottom";
@@ -85,29 +86,33 @@ programs.waybar.settings = {
     };
 
     clock = {
-      format = "{:%d/%m %H:%M:%S}";
-      rotate = 0;
-      tooltip-format = "<span>{calendar}</span>";
-      calendar = {
+    format = "{:%d/%m %H:%M:%S}";
+    interval = 1;
+    rotate = 0;
+
+    # Tooltip showing the calendar with some colors
+    tooltip-format = "<span>{calendar}</span>";
+    calendar = {
         mode = "month";
         mode-mon-col = 3;
         on-scroll = 1;
-        on-click-right = "mode";
         format = {
-          months = "<span color='#ffead3'><b>{}</b></span>";
-          weekdays = "<span color='#ffcc66'><b>{}</b></span>";
-          today = "<span color='#ff6699'><b>{}</b></span>";
+        months = "<span color='#ffead3'><b>{}</b></span>";
+        weekdays = "<span color='#ffcc66'><b>{}</b></span>";
+        today = "<span color='#ff6699'><b>{}</b></span>";
         };
-      };
-      actions = {
-        on-click-right = "mode";
-        on-click-forward = "tz_up";
-        on-click-backward = "tz_down";
-        on-scroll-up = "shift_up";
-        on-scroll-down = "shift_down";
-      };
-      interval = 1;
     };
+
+    # Actions for mouse clicks and scrolls
+    actions = {
+        on-click = "tz_up";            # Cycle forward timezone
+        on-click-right = "mode";       # Change calendar mode
+        on-scroll-up = "shift_up";     # Scroll to next
+        on-scroll-down = "shift_down"; # Scroll to previous
+    };
+    };
+
+
 
     cpu = {
       format = "  {usage}%";
@@ -212,8 +217,22 @@ programs.waybar.settings = {
     };
 
     "custom/notification" = {
-      tooltip = false;
-      # format = "…"  // You were still writing this
+    tooltip = false;
+    format = "{icon}";
+    format-icons = {
+        "notification" = "<span foreground='red'><small>⬤</small></span>";
+        "none" = "";
+        "dnd-notification" = " <span foreground='red'><small>⬤</small></span>";
+        "dnd-none" = "";
     };
-  };
+    "return-type" = "json";
+    "exec-if" = "which swaync-client";
+    "exec" = "swaync-client -swb";
+    "on-click" = "swaync-client -t -sw";
+    "on-click-right" = "swaync-client -d -sw";
+    "escape" = true;
+    };
+
 };
+};
+}

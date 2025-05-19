@@ -87,6 +87,12 @@
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # Default shells
+  environment.shells = with pkgs; [bash zsh];
+  users.defaultUserShell = pkgs.bash;
+  programs.zsh.enable = false;
+  
   
   # OpenGL
   hardware.graphics = {

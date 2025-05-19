@@ -5,8 +5,6 @@
   environment.systemPackages = 
     (with pkgsUnstable; [
       # Unstable here
-    ags
-    astal.packages.${pkgsUnstable.system}.default
     yazi
     ])
 

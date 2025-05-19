@@ -5,12 +5,11 @@
   inputs = {
     nixpkgsStable.url = "nixpkgs/nixos-24.11"; # Change this to update version
     nixpkgsUnstable.url = "nixpkgs/nixos-unstable";
+    stylix = {
+      url = "github:nix-community/stylix/release-24.11";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgsStable";
-    };
-    stylix = {
-      url = "github:NixOS/nixpkgs/nixos-24.11";
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
     solaar = {
@@ -36,8 +35,8 @@
       monolith = lib.nixosSystem { # System Name
         inherit system;
 	      modules = [
-            stylix.nixosModules.stylix
             ./configuration.nix
+            stylix.nixosModules.stylix
             solaar.nixosModules.default
           ];
         specialArgs = {

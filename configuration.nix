@@ -15,6 +15,13 @@
       ./modules/users.nix
     ];
 
+  stylix.enable = true;
+  #stylix.image = ./wallpaper.png;   # Path to your wallpaper
+  stylix.polarity = "dark";         # "dark" or "light"
+  # Optional: use a base16 color scheme
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";  
+
+
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.enable = true;

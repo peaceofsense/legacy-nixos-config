@@ -20,12 +20,11 @@
 
   };
 
-  home.file.".config/waybar/config".source = ./dotfiles/.config/waybar/config;
-
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  programs.dconf.enable = true;
 }

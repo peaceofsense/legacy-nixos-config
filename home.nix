@@ -20,7 +20,7 @@
 
   };
 
-  home.file.".config/waybar/config".source = /home/dotfiles/.config/waybar/config;
+  home.file.".config/waybar/config".source = ./dotfiles/.config/waybar/config;
 
   home.sessionVariables = {
     # EDITOR = "emacs";

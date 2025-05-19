@@ -35,23 +35,23 @@ programs.waybar.settings = {
     };
 
     "custom/nixicon" = {
-      format = "\uf313";
+      format = "";
       tooltip = false;
     };
 
     "hyprland/workspaces" = {
       format = "{icon}";
       format-icons = {
-        "1" = "\u4E00";
-        "2" = "\u4E8C";
-        "3" = "\u4E09";
+        "1" = "一";  # U+4E00
+        "2" = "二";  # U+4E8C
+        "3" = "三";  # U+4E09
         "4" = "4";
         "5" = "5";
         "6" = "6";
         "7" = "7";
-        "8" = "\u516B";
-        "9" = "\u4E5D";
-        "10" = "󰚌";
+        "8" = "八";  # U+516B
+        "9" = "九";  # U+4E5D
+        "10" = "";
       };
       persistent-workspaces = {
         "*" = 1;

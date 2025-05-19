@@ -42,17 +42,17 @@
   systemd.services.NetworkManager-wait-online.enable = false;
 
   # Wireless (Uncomment if using Wi-Fi with wpa_supplicant)
-  # networking.wireless.enable = true;  
+  # networking.wireless.enable = true;
 
   # Hostname Configuration
-  networking.hostName = "monolith"; 
+  networking.hostName = "monolith";
 
   # Network Configuration
   networking.networkmanager.enable = true;
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
   networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
   # networking.proxy.default = "http://user:password@proxy:port/";  # Uncomment if needed
-    
+
   # Open ports in the firewall.
   networking.firewall.enable = true;
   networking.firewall.allowPing = true;
@@ -64,7 +64,7 @@
   hardware.pulseaudio.enable = false;
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
-  
+
   # Enable I2C
   hardware.i2c.enable = true;
 
@@ -92,8 +92,7 @@
   environment.shells = with pkgs; [bash zsh];
   users.defaultUserShell = pkgs.bash;
   programs.zsh.enable = false;
-  
-  
+
   # OpenGL
   hardware.graphics = {
     enable = true;
@@ -133,13 +132,13 @@
       #xdg-desktop-portal-wlr
       xdg-desktop-portal-hyprland
     ];
-  }; 
-  
+  };
+
   # Enable automatic garbage collection
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";  # Runs garbage collection weekly
   nix.gc.options = "--delete-older-than 30d";
-  
+
 
   # Polkit
   security.polkit.enable = true;
@@ -162,5 +161,5 @@
 
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

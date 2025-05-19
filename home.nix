@@ -26,5 +26,57 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programs.dconf.enable = true;
+
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
+    style.package = pkgs.adwaita-qt;
+    style.name = "adwaita-dark";
+
+  };
+
+  home.pointerCursor = {
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 24;
+    gtk.enable = true;
+  };
+
+
+  gtk = {
+    enable = true;
+
+    font = {
+      name = "Inter";
+      package = pkgs.google-fonts.override {fonts = ["Inter"];};
+      size = 9;
+    };
+
+    theme.package = pkgs.adw-gtk3;
+    theme.name = "adw-gtk3-dark";
+
+    iconTheme.package = pkgs.papirus-icon-theme;
+    iconTheme.name = "Papirus-Dark";
+
+    gtk3.extraConfig = {
+		  gtk-application-prefer-dark-theme = ''
+			1
+			'';
+    };
+    gtk4.extraConfig = {
+		  gtk-application-prefer-dark-theme = ''
+			1
+			'';
+    };
+  };
+
+  
+  xdg.enable = true;
+  xdg.userDirs = {
+    extraConfig = {
+      XDG_GAME_DIR = "${config.home.homeDirectory}/Media/Games";
+      XDG_GAME_SAVE_DIR = "${config.home.homeDirectory}/Media/Game Saves";
+    };
+  };
+
 }

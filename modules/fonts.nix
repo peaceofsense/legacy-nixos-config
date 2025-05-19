@@ -53,6 +53,7 @@
   environment.systemPackages = with pkgs; [
     # GTK Themes
     arc-theme
+    adw-gtk3
     adwaita-qt
     graphite-gtk-theme
     matcha-gtk-theme
@@ -60,9 +61,6 @@
 
     # Icon Themes
     papirus-icon-theme
-    tela-icon-theme
-    breeze-icons
-    gnome-themes-extra
   ];
-  
+
 }

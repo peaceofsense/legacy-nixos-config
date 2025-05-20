@@ -1,8 +1,9 @@
 # nixos
+
 My NixOS configuration
 
-Symbolic link pattern
-'''bash
+Symbolic link pattern bash
+
 # NixOS Configuration
 
 This repository contains the configuration files for NixOS. The configuration files are managed via symbolic links to facilitate version control and easy management.
@@ -22,3 +23,4 @@ lrwxrwxrwx  1 root root   47  7. Sep 12:29 fonts.nix -> /home/peaceofsense/nixos
 lrwxrwxrwx  1 root root   64  7. Sep 12:29 hardware-configuration.nix -> /home/peaceofsense/nixos-config/nixos/hardware-configuration.nix
 lrwxrwxrwx  1 root root   50  7. Sep 12:29 pipewire.nix -> /home/peaceofsense/nixos-config/nixos/pipewire.nix
 '''
+```

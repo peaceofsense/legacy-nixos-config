@@ -79,11 +79,15 @@
     };
   };
 
-  
+
 
   imports = [
     ./usr/programs
+    ./usr/core-system
 
   ];
 
+  home-manager.users.«name» = {
+  stylix.targets.xyz.enable = false;
+  };
 }

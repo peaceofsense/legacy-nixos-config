@@ -18,10 +18,11 @@
       #url = "github:Svenum/Solaar-Flake/main"; # Uncomment line for latest unstable version
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = 
-  { self, nixpkgsStable, nixpkgsUnstable, home-manager, stylix, solaar,... } @ inputs:
+  { self, nixpkgsStable, nixpkgsUnstable, home-manager, stylix, solaar, catppuccin,... } @ inputs:
     let
       lib = nixpkgsStable.lib; # It is like pass nixpkgs to this var
       system = "x86_64-linux";
@@ -48,7 +49,11 @@
     homeConfigurations = {
       peaceofsense = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [stylix.homeManagerModules.stylix ./home.nix];
+        modules = [
+          stylix.homeManagerModules.stylix 
+          ./home.nix
+          catppuccin.homeManagerModules.catppuccin
+        ];
       };
     };
   };

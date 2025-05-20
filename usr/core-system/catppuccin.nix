@@ -2,7 +2,7 @@
     catppuccin = {
         enable = true;
         flavor = "latte";  # Change this to frappe, macchiato, latte if needed
-        rofi.enable = true;
+    #    rofi.enable = true;
         kitty.enable = true;
         # Add other apps you use:
         zathura.enable = true;

@@ -1,4 +1,4 @@
-@import "catppuccin.rasi"
+@import "catppuccin-default.rasi"
 
 * {
   font: "JetBrains Mono 12";

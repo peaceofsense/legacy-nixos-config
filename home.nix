@@ -45,10 +45,11 @@
   gtk = {
     enable = true;
 
+
     font = {
       name = "Inter";
       package = pkgs.google-fonts.override {fonts = ["Inter"];};
-      size = 9;
+      size = 10;
     };
 
     theme.package = pkgs.adw-gtk3;

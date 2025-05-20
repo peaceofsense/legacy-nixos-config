@@ -157,7 +157,7 @@
 
     #custom-nixicon {
       font-size: 20px;
-      color: @green;
+      color: @peach;
       margin: 0 8px;
     }
   '';

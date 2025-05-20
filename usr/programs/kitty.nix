@@ -3,63 +3,71 @@
 {
   programs.kitty = {
     enable = true;
-
     font = {
       name = "FiraCode Nerd Font Mono";
       size = 12.0;
     };
-
-    # Use extraConfig for all other options
     extraConfig = ''
+      # Font variants
       italic_font      auto
       bold_font        auto
       bold_italic_font auto
 
-      background_opacity 0.9
+      # Window & background opacity (not color!)
+      background_opacity    0.95
 
-      cursor_shape     beam
-      cursor_blink_interval     0.5
+      # Cursor
+      cursor_shape          beam
+      cursor_blink_interval 0.5
       cursor_stop_blinking_after 15.0
 
-      scrollback_lines 2000
-      scrollback_pager less +G -R
+      # Selection (no color, let theme handle it)
+      # selection_foreground
+      # selection_background
+
+      # Scrollback & mouse
+      scrollback_lines      2000
+      scrollback_pager      less +G -R
       wheel_scroll_multiplier 5.0
-      click_interval 0.5
+      click_interval        0.5
       select_by_word_characters :@-./_~?&=%+#
-      mouse_hide_wait 0.0
+      mouse_hide_wait       0.0
 
-      enabled_layouts *
-      remember_window_size   no
-      initial_window_width   640
-      initial_window_height  400
+      # Window size/layout
+      enabled_layouts       *
+      remember_window_size  no
+      initial_window_width  800
+      initial_window_height 480
 
-      repaint_delay    10
-      input_delay 3
-      visual_bell_duration 0.0
-      enable_audio_bell no
+      # Performance
+      repaint_delay         10
+      input_delay           3
 
-      open_url_modifiers ctrl+shift
-      open_url_with default
-      term xterm-kitty
+      # Bells
+      visual_bell_duration  0.0
+      enable_audio_bell     no
 
-      window_border_width 0
-      window_margin_width 15
+      # URL handling
+      open_url_modifiers    ctrl+shift
+      open_url_with         default
 
-      tab_bar_edge                      bottom
-      tab_bar_margin_height      0 7.5 
-      tab_bar_style                       slant
-      tab_bar_align                       left
-      tab_title_max_length          27
+      # TERM
+      term                  xterm-kitty
 
-      tab_title_template              "{index} {title[title.rfind('/')+1:]}"
-      active_tab_title_template  " {index} {title[title.rfind('/')+1:]}"
-      active_tab_font_style         normal
+      # Borders & margins
+      window_border_width   0
+      window_margin_width   15
 
-      tab_bar_background           #36a3d9
-      inactive_tab_background   #36a3d9
-      inactive_tab_foreground    #0e1419
-      active_tab_background      #0e1419
-      active_tab_foreground       #E7C547
+      # Tab bar appearance (NO color values!)
+      tab_bar_edge              bottom
+      tab_bar_margin_height     0 7.5
+      tab_bar_style             powerline
+      tab_bar_align             left
+      tab_title_max_length      27
+
+      tab_title_template        "{index}"
+      active_tab_title_template " {index}"
+      active_tab_font_style     bold
 
       # Key mappings
       map super+v             paste_from_clipboard
@@ -82,7 +90,7 @@
       map ctrl+shift+[        previous_window
       map ctrl+shift+f        move_window_forward
       map ctrl+shift+b        move_window_backward
-      map ctrl+shift+\`        move_window_to_top
+      map ctrl+shift+\`       move_window_to_top
       map ctrl+shift+1        first_window
       map ctrl+shift+2        second_window
       map ctrl+shift+3        third_window
@@ -112,10 +120,6 @@
       confirm_os_window_close 0
 
       allow_remote_control yes
-
-      # Include extra theme files if you want
-      include theme.conf
-      include current-theme.conf
     '';
   };
 

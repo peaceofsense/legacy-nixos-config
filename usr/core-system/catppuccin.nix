@@ -1,6 +1,7 @@
 {
     catppuccin = {
         enable = true;
+        accent = "peach"; 
         flavor = "mocha";  # Change this to frappe, macchiato, latte if needed
         rofi = {
             enable = false;
@@ -12,6 +13,7 @@
         };
         zathura.enable = true;
         btop.enable = true;
-      # etc.
+        thunderbird.enable = false;
+        swaync.enable = true;
     };
 }

@@ -3,6 +3,7 @@
     ./rofi
     ./waybar
     ./kitty.nix
+    ./swaync.nix
     ./yazi.nix
   ];
 

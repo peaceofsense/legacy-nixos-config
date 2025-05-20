@@ -48,7 +48,7 @@
     homeConfigurations = {
       peaceofsense = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [./home.nix stylix.homeModules.stylix];
+        modules = [./home.nix stylix.homeManagerModules.stylix];
       };
     };
   };

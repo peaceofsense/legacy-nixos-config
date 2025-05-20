@@ -1,6 +1,5 @@
 # Use your harware-configuration.nix
 
-
 { config, pkgs, pkgsUnstable, ... }:
 
 {

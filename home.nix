@@ -42,7 +42,6 @@
     gtk.enable = true;
   };
 
-
   gtk = {
     enable = true;
 
@@ -69,7 +68,6 @@
 			'';
     };
   };
-
   
   xdg.enable = true;
   xdg.userDirs = {
@@ -79,21 +77,9 @@
     };
   };
 
-
-
   imports = [
     ./usr/programs
     ./usr/core-system
-
   ];
-
-  stylix = {
-    enable = true;
-    base16Scheme = "gruvbox-dark-hard";
-    wallpaper = ./wallhaven17.png;
-  #    fonts = {
-  #   monospace = "FiraCode Nerd Font";
-  #    sansSerif = "Inter";
-  };
   
 }

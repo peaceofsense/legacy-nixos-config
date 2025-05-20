@@ -2,8 +2,8 @@
   imports = [
     ./rofi
     ./waybar
+    ./swaync
     ./kitty.nix
-    ./swaync.nix
     ./yazi.nix
   ];
 

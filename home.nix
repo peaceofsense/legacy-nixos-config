@@ -87,7 +87,13 @@
 
   ];
 
-  home-manager.users.«name» = {
-  stylix.targets.xyz.enable = false;
+  stylix = {
+    enable = true;
+    base16Scheme = "gruvbox-dark-hard";
+    wallpaper = ./wallhaven17.png;
+  #    fonts = {
+  #   monospace = "FiraCode Nerd Font";
+  #    sansSerif = "Inter";
   };
+  
 }

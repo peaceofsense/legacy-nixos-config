@@ -21,6 +21,7 @@
       sidebar-mode = true;
     };
     theme = builtins.toFile "my-rofi-theme.rasi" ''
+
         * {
         rosewater: #f5e0dc;
         flamingo:  #f2cdcd;

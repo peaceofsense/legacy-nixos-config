@@ -1,9 +1,10 @@
 {
-  imports = [
-    ./themes/mocha.nix
-  ];
+ # imports = [
+ #   ./themes/mocha.nix
+ # ];
 
   programs.waybar.style = ''
+    @import "catppuccin.css";
     * {
       font-family: "JetBrainsMono NF", "Font Awesome 6 Free";
       font-size: 14px;

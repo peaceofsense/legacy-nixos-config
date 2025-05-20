@@ -1,6 +1,6 @@
 {
   imports = [
-    ./mocha.nix
+    ./themes/mocha.nix
   ];
 
   programs.waybar.style = ''

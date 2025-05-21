@@ -104,14 +104,18 @@
     #battery {
       color: @base0B;            /* Green */
       margin: 0 8px;
+      margin-right: 15px;
+
     }
 
     #battery.charging {
       color: @base0A;            /* Yellow */
+      margin-right: 15px;    
     }
 
     #battery.warning:not(.charging) {
       color: @base08;            /* Red */
+      margin-right: 15px;
     }
 
     #backlight {

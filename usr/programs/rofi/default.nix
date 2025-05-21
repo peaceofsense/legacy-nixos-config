@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
-
 {
+  stylix.targets.rofi.enable = false;
+
   programs.rofi = {
     enable = true;
     plugins = [pkgs.rofimoji pkgs.rofi-calc];
@@ -25,36 +26,21 @@
 
       builtins.toFile "theme.rasi" ''
       * {
-        rosewater: #f5e0dc;
-        flamingo:  #f2cdcd;
-        pink:      #f5c2e7;
-        mauve:     #cba6f7;
-        red:       #f38ba8;
-        maroon:    #eba0ac;
-        peach:     #fab387;
-        yellow:    #f9e2af;
-        green:     #a6e3a1;
-        teal:      #94e2d5;
-        sky:       #89dceb;
-        sapphire:  #74c7ec;
-        blue:      #89b4fa;
-        lavender:  #b4befe;
-        text:      #cdd6f4;
-        subtext1:  #bac2de;
-        subtext0:  #a6adc8;
-        overlay2:  #9399b2;
-        overlay1:  #7f849c;
-        overlay0:  #6c7086;
-        surface2:  #585b70;
-        surface1:  #45475a;
-        surface0:  #313244;
-        base:      #1e1e2e;
-        mantle:    #181825;
-        crust:     #11111b;
+          bg0:    ${base00}; // #1d2021 - Main background (very dark, perfect for deep contrast)
+          bg1:    ${base01}; // #3c3836 - Slightly lighter, ideal for panels/input fields
+          bg2:    ${base02}; // #504945 - Button background, secondary elements
+          bg3:    ${base03}; // #665c54 - Borders, selected states, subtle dividers
 
+          fg0:    ${base05}; // #d5c4a1 - Default text (good contrast on bg0/bg1)
+          fg1:    ${base07}; // #fbf1c7 - Highlight text / selected item text
+          fg2:    ${base04}; // #bdae93 - Prompt label, icons, secondary text
+          fg3:    ${base03}; // #665c54 - Placeholder, disabled text, less emphasis
+      }
+
+      * {
         font: "JetBrains Mono 12";
         background-color: transparent;
-        text-color: @text;
+        text-color: @fg0;
         margin: 0px;
         padding: 0px;
         spacing: 0px;

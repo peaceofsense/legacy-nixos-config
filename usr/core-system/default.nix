@@ -1,7 +1,7 @@
 {
   imports = [
     ./mimeApps.nix
-    ./catppuccin.nix
+    # ./catppuccin.nix
   ];
 
 

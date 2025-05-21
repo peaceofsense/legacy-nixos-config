@@ -37,8 +37,15 @@
         inherit system;
 	      modules = [
             ./configuration.nix
+            home-manager.nixosModules.home-manager {
+              home-manager.useGlobalPkgs = true;
+              #home-manager.useUserPackages = true;
+              home-manager.users.peaceofsense = import ./home.nix;
+              # Optionally: home-manager.extraSpecialArgs = { inherit inputs; };
+            }
             stylix.nixosModules.stylix
             solaar.nixosModules.default
+            catppuccin.nixosModules.catppuccin
           ];
         specialArgs = {
           inherit username;
@@ -46,6 +53,7 @@
         };
       };
     };
+    /*
     homeConfigurations = {
       peaceofsense = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
@@ -56,6 +64,7 @@
         ];
       };
     };
+    */
   };
 
 }

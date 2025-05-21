@@ -15,10 +15,13 @@
     ];
 
   stylix.enable = true;
-  #stylix.image = ./wallpaper.png;   # Path to your wallpaper
+  stylix.image = ./wallhaven17.png;   # Path to your wallpaper
   stylix.polarity = "dark";         # "dark" or "light"
   # Optional: use a base16 color scheme
   stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+
+  
+ 
 
 
   # Bootloader.

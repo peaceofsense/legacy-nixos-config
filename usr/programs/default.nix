@@ -5,6 +5,7 @@
     ./swaync
     ./vscode
     ./kitty.nix
+    ./starship
     ./yazi.nix
   ];
 

@@ -5,7 +5,7 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
+      ./modules/hardware-configuration.nix
       ./modules/fonts.nix
       ./modules/packages.nix
       ./modules/pipewire.nix

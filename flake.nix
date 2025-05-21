@@ -19,7 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
     catppuccin.url = "github:catppuccin/nix";
-    grub2-themes.url = "github:vinceliuice/grub2-themes";
   };
 
   outputs = 

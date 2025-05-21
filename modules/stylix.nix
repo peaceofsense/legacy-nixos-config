@@ -2,10 +2,10 @@
 
     {
         stylix.enable = true;
-        stylix.image = ./wallhaven17.png;   # Path to your wallpaper
+        stylix.image = ./wallpapers/wallhaven.png;   # Path to your wallpaper
         stylix.polarity = "dark";         # Affects calander and wttr module
         # Optional: use a base16 color scheme
-        stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+        # stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
         stylix.cursor = {
             name = "Bibata-Modern-Ice";     
             package = pkgs.bibata-cursors;  

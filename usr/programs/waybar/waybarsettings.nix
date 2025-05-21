@@ -51,7 +51,7 @@ programs.waybar.settings = {
         "7" = "7";
         "8" = "八";  # U+516B
         "9" = "九";  # U+4E5D
-        "10" = "";
+        "10" = "";
       };
       persistent-workspaces = {
         "*" = 1;

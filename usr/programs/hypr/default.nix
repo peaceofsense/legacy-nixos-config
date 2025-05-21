@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./hypridle.nix
+    ./hyprlock.nix
     ./hyprpaper.nix
     ./hyprland/autostart.nix
     ./hyprland/appearance.nix

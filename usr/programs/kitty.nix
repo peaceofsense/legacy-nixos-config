@@ -4,8 +4,8 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "FiraCode Nerd Font Mono";
-      size = 12.0;
+      name = "JetBrainsMono NF";
+      # size = 12.0;
     };
     extraConfig = ''
       # Font variants
@@ -66,7 +66,7 @@
       tab_title_max_length      27
 
       tab_title_template        "{index}"
-      active_tab_title_template " {index}"
+      active_tab_title_template "󰄛"
       active_tab_font_style     bold
 
       # Key mappings

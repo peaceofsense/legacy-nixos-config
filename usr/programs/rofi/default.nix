@@ -3,8 +3,9 @@
 {
   programs.rofi = {
     enable = true;
-    plugins = [pkgs.rofimoji];
+    plugins = [pkgs.rofimoji pkgs.rofi-calc];
     package = pkgs.rofi-wayland;
+    cycle = true;
     terminal = "kitty";
     extraConfig = {
       modi = "run,window,combi";
@@ -20,9 +21,10 @@
       display-window = "Window";
       sidebar-mode = true;
     };
-    theme = builtins.toFile "my-rofi-theme.rasi" ''
+    theme = with config.lib.stylix.colors.withHashtag;
 
-        * {
+      builtins.toFile "theme.rasi" ''
+      * {
         rosewater: #f5e0dc;
         flamingo:  #f2cdcd;
         pink:      #f5c2e7;
@@ -56,82 +58,8 @@
         margin: 0px;
         padding: 0px;
         spacing: 0px;
-        }
-
-        window {
-        location: north;
-        y-offset: calc(50% - 176px);
-        width: 480;
-        border-radius: 24px;
-        background-color: @base;
-        }
-
-        mainbox {
-        padding: 12px;
-        }
-
-        inputbar {
-        background-color: @mantle;
-        border-color: @surface2;
-        border: 2px;
-        border-radius: 16px;
-        padding: 8px 16px;
-        spacing: 8px;
-        children: [ prompt, entry ];
-        }
-
-        prompt {
-        text-color: @overlay1;
-        }
-
-        entry {
-        placeholder: "Search";
-        placeholder-color: @overlay0;
-        }
-
-        message {
-        margin: 12px 0 0;
-        border-radius: 16px;
-        border-color: @surface0;
-        background-color: @surface0;
-        }
-
-        textbox {
-        padding: 8px 24px;
-        }
-
-        listview {
-        background-color: transparent;
-        margin: 12px 0 0;
-        lines: 8;
-        columns: 1;
-        fixed-height: false;
-        }
-
-        element {
-        padding: 8px 16px;
-        spacing: 8px;
-        border-radius: 16px;
-        }
-
-        element normal active,
-        element alternate active {
-        text-color: @crust;
-        }
-
-        element selected normal,
-        element selected active {
-        background-color: @surface1;
-        }
-
-        element-icon {
-        size: 1em;
-        vertical-align: 0.5;
-        }
-
-        element-text {
-        text-color: inherit;
-        }
-    '';
+      }
+      ${builtins.readFile ./rofi-style.rasi}'';
   };
+
 }

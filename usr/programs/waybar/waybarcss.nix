@@ -1,9 +1,206 @@
+{config, ...}:
 {
  # imports = [
  #   ./themes/mocha.nix
  # ];
+  stylix.targets.waybar.enable = false;
+  stylix.targets.waybar.addCss = true;
 
-  programs.waybar.style = ''
+  programs.waybar.style =   with config.lib.stylix.colors.withHashtag;
+  ''
+    @define-color base00 ${base00}; @define-color base01 ${base01}; @define-color base02 ${base02}; @define-color base03 ${base03};
+    @define-color base04 ${base04}; @define-color base05 ${base05}; @define-color base06 ${base06}; @define-color base07 ${base07};
+    @define-color base08 ${base08}; @define-color base09 ${base09}; @define-color base0A ${base0A}; @define-color base0B ${base0B};
+    @define-color base0C ${base0C}; @define-color base0D ${base0D}; @define-color base0E ${base0E}; @define-color base0F ${base0F};
+  ''
+  
+  +
+  ''
+    * {
+      font-family: "JetBrainsMono NF";
+      font-size: 14px;
+      min-height: 0;
+    }
+
+    #waybar {
+      background: @base00;       /* Default Background */
+      color: @base05;            /* Default Foreground */
+      margin: 5px 5px;
+      border-radius: 8px;
+      border: 1px solid @base01; /* Lighter Background */
+    }
+
+    #workspaces {
+      margin: 5px 1rem;
+    }
+
+    #workspaces button {
+      background: transparent;
+      color: @base06;            /* Light Foreground */
+      padding: 4px 8px;
+      margin: 2px;
+      border-radius: 6px;
+    }
+
+    #workspaces button.active {
+      background: @base01;       /* Lighter Background */
+      color: @base0B;            /* Strings/Inherited Class = Green */
+      border: 2px solid @base0B;
+    }
+
+    #workspaces button:hover {
+      background: @base02;       /* Selection Background */
+      color: @base0C;            /* Support/Regex = Teal */
+    }
+
+    #hyprland-workspaces {
+      background-color: @base00; /* Default Background */
+      border-radius: 10px;
+      padding: 4px;
+      margin: 5px;
+    }
+
+    #hyprland-workspaces button {
+      background: transparent;
+      color: @base06;            /* Light Foreground */
+      border-radius: 1rem;
+      padding: 0.4rem;
+      margin: 0 2px;
+    }
+
+    #hyprland-workspaces button.active {
+      color: @base0D;            /* Functions/Methods = Blue */
+      background: @base02;       /* Selection Background */
+    }
+
+    #hyprland-workspaces button:hover {
+      color: @base0C;            /* Support/Regex = Teal */
+      background: @base03;       /* Comments/Invisibles */
+    }
+
+    #hyprland-window {
+      color: @base04;            /* Dark Foreground */
+      margin-left: 2rem;
+    }
+
+    #network, #cpu, #memory {
+      color: @base04;            /* Keywords/Storage = Mauve */
+      margin: 0 8px;
+    }
+
+    #bluetooth {
+      color: @base0D;            /* Blue */
+      margin: 0 8px;
+    }
+
+    #hyprland-language {
+      color: @base05;            /* Default Foreground */
+      background: @base01;       /* Lighter Background */
+      border-radius: 6px;
+      padding: 2px 8px;
+      margin: 0 8px;
+    }
+
+    #battery {
+      color: @base0B;            /* Green */
+      margin: 0 8px;
+    }
+
+    #battery.charging {
+      color: @base0A;            /* Yellow */
+    }
+
+    #battery.warning:not(.charging) {
+      color: @base08;            /* Red */
+    }
+
+    #backlight {
+      color: @base09;            /* Orange/Peach */
+      margin-left: 10px;
+    }
+
+    #pulseaudio {
+      color: @base04;            /* Mauve */
+      margin: 0 8px;
+    }
+
+    #pulseaudio#microphone {
+      color: @base04;            /* Pink */
+      margin: 0 8px;
+    }
+
+    #clock {
+      font-family: "Fira Code Nerd Font", monospace;
+      color: @base0D;            /* Blue */
+      margin: 0 8px;
+      padding: 0 10px;
+    }
+
+    #custom-music {
+      color: @base0F;            /* Pink */
+      padding: 0 8px;
+    }
+
+    #custom-lock {
+      color: @base0E;            /* Mauve */
+      padding: 0 8px;
+      border-radius: 10px 0 0 10px;
+    }
+
+    #custom-power {
+      color: @base08;            /* Red */
+      padding: 0 8px;
+      border-radius: 0 10px 10px 0;
+    }
+
+    #tray, #custom-weather, #custom-notification {
+      margin: 0 8px;
+      color: @base04;            /* Dark Foreground */
+    }
+
+    #keyboard-state label {
+      color: @base01;           /* Light Foreground */
+      margin: 0 8px;
+    }
+
+    #keyboard-state label.locked {
+      color: @base08;            /* Default Foreground */
+    }
+
+    #custom-nixicon {
+      font-size: 20px;
+      color: @base09;            /* Orange/Peach */
+      margin: 0 8px;
+    }
+  '';
+}
+  
+
+  
+  /*
+
+  "base00": #1b1c17,
+  #base01#: #842313#,
+  #base02#: #906021#,
+  #base03#: #c39553#,
+  #base04#: #d5b392#,
+  #base05#: #e9e0c9#,
+  #base06#: #f7d3c3#,
+  #base07#: #e8dfc3#,
+  #base08#: #7a9882#,
+  #base09#: #8b9662#,
+  #base0A#: #989435#,
+  #base0B#: #a98b75#,
+  #base0C#: #ec6831#,
+  #base0D#: #ae8b4a#,
+  #base0E#: #929289#,
+  #base0F#: #cc7f1d#,
+  #author#: #Stylix#,
+  #scheme#: #Stylix#,
+  #slug": "stylix"
+
+
+  ''
     @import "catppuccin.css";
     * {
       font-family: "JetBrainsMono NF", "Font Awesome 6 Free";
@@ -162,4 +359,5 @@
       margin: 0 8px;
     }
   '';
-}
+  */
+

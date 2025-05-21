@@ -34,26 +34,26 @@
     style.name = "kvantum";
 
   };
-
+  /*
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Ice";
     size = 24;
     gtk.enable = true;
   };
-
+  */
   gtk = {
     enable = true;
 
 
-    font = {
-      name = "Inter";
-      package = pkgs.google-fonts.override {fonts = ["Inter"];};
-      size = 10;
-    };
+    #font = {
+    #  name = "Inter";
+    #  package = pkgs.google-fonts.override {fonts = ["Inter"];};
+    #  size = 10;
+    #};
 
-    theme.package = pkgs.adw-gtk3;
-    theme.name = "adw-gtk3-dark";
+    #theme.package = pkgs.adw-gtk3;
+    #theme.name = "adw-gtk3";
 
     iconTheme.package = pkgs.papirus-icon-theme;
     iconTheme.name = "Papirus-Dark";

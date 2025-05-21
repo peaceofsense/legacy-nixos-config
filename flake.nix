@@ -3,13 +3,13 @@
   description = "yes";
 
   inputs = {
-    nixpkgsStable.url = "nixpkgs/nixos-24.11"; # Change this to update version
+    nixpkgsStable.url = "nixpkgs/nixos-25.05"; # Change this to update version
     nixpkgsUnstable.url = "nixpkgs/nixos-unstable";
     stylix = {
-      url = "github:nix-community/stylix/release-24.11";
+      url = "github:nix-community/stylix/release-25.05";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release- 25.05";
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
     solaar = {

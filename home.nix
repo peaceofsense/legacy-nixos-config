@@ -29,9 +29,9 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "kvantum";
+  #  platformTheme.name = "kvantum";
   #  style.package = pkgs.adwaita-qt;
-    style.name = "kvantum";
+  #  style.name = "kvantum";
 
   };
   /*

@@ -11,6 +11,7 @@
       # Text
       "text/plain" = "geany.desktop";
       "text/markdown" = "geany.desktop";
+      "text/json" = "geany.desktop";
       "text/calendar" = "userapp-Thunderbird-WP7AU2.desktop";
 
       # PDFs

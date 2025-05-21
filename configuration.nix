@@ -37,7 +37,7 @@
 #    };
     monospace = {
       name = "JetBrainsMono NF";
-      package = pkgs.jetbrains-mono;
+      package = pkgs.nerd-fonts.jetbrains-mono;
     };
     sansSerif = {
       name = "Inter";
@@ -100,7 +100,6 @@
 
   # Hardware Configuration
   hardware.bluetooth.enable = true;
-  hardware.pulseaudio.enable = false;
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
 

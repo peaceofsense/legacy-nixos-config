@@ -216,14 +216,14 @@ programs.waybar.settings = {
       scroll-step = 5;
     };
 
-    "custom/notification" = {
-    tooltip = false;
-    format = "{icon}";
-    format-icons = {
-        "notification" = "<span foreground='red'><small>⬤</small></span>";
-        "none" = "";
-        "dnd-notification" = " <span foreground='red'><small>⬤</small></span>";
-        "dnd-none" = "";
+   "custom/notification" = {
+      tooltip = false;
+      format = "{icon}";
+      format-icons = {
+          "notification" = "󰅸";
+          "none" = "󰂜";
+          "dnd-notification" = "󰺁";
+          "dnd-none" = "󱏨";
     };
     "return-type" = "json";
     "exec-if" = "which swaync-client";

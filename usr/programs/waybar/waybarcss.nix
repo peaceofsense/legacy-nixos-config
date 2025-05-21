@@ -153,7 +153,13 @@
       border-radius: 0 10px 10px 0;
     }
 
-    #tray, #custom-weather, #custom-notification {
+    #tray, #custom-weather {
+      margin: 0 8px;
+      color: @base04;            /* Dark Foreground */
+    }
+
+    #custom-notification {
+      font-size: 16px;
       margin: 0 8px;
       color: @base04;            /* Dark Foreground */
     }

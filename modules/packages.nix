@@ -28,7 +28,6 @@
     kdePackages.okular    
     # opentabletdriver
     mame
-    megasync
     pandoc
     pdfarranger
     syncthing
@@ -83,7 +82,7 @@
     kitty
     kittysay
     libnotify
-    libstdcxx5
+    #libstdcxx5
     libtiff
     loupe
     neovim
@@ -175,6 +174,7 @@
 
     # Security & Privacy
     proton-pass
+    protonvpn-cli
     ente-cli
     ente-auth
     gnupg # Signature and encryption lib
@@ -186,6 +186,7 @@
     android-tools
     cmatrix
     cowsay
+    mangohud
     wttrbar
     dotnet-runtime
     #(lutris.override {

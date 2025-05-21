@@ -3,7 +3,7 @@
   fonts = {
     packages = with pkgs; [
       # Fonts
-      fira-code-nerdfont
+      nerd-fonts.fira-code
       font-awesome
       material-icons
       material-design-icons
@@ -22,14 +22,14 @@
       lexend
       jost
       dejavu_fonts
-      nerdfonts
+      nerd-fonts.jetbrains-mono
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-emoji
       jetbrains-mono
       font-awesome_5
-      (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    #  (nerdfonts.override {fonts = ["JetBrainsMono"];})
     ];
 
     enableDefaultPackages = false;

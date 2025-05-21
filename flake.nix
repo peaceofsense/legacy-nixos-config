@@ -9,7 +9,7 @@
       url = "github:nix-community/stylix/release-25.05";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release- 25.05";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
     solaar = {
@@ -19,6 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
     catppuccin.url = "github:catppuccin/nix";
+    grub2-themes.url = "github:vinceliuice/grub2-themes";
   };
 
   outputs = 

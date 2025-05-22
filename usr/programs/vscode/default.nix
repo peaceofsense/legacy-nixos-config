@@ -16,6 +16,7 @@
                 catppuccin.catppuccin-vsc-icons
             # cweijan.vscode-office
             # ericsia.pythonsnippets3
+                
                 jdinhlife.gruvbox
                 johnpapa.vscode-peacock
                 ms-python.debugpy

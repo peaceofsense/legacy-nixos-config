@@ -4,7 +4,7 @@
 
   programs.rofi = {
     enable = true;
-    plugins = [pkgs.rofimoji pkgs.rofi-calc];
+    plugins = [pkgs.rofimoji pkgs.rofi-calc pkgs.rofi-file-browser];
     package = pkgs.rofi-wayland;
     cycle = true;
     terminal = "kitty";

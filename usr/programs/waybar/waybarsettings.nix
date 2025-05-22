@@ -29,7 +29,7 @@ programs.waybar.settings = {
     "custom/weather" = {
       format = "{}°";
       tooltip = true;
-      interval = 3600;
+      interval = 1800;
       exec = "wttrbar";
       return-type = "json";
     };
@@ -86,7 +86,7 @@ programs.waybar.settings = {
     };
 
     clock = {
-    format = "{:%d/%m %H:%M:%S}";
+    format = "{:%d.%m %H:%M:%S}";
     interval = 1;
     rotate = 0;
 

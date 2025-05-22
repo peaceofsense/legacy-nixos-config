@@ -79,12 +79,12 @@
     }
 
     #hyprland-window {
-      color: @base04;            /* Dark Foreground */
+      color: @base05;            /* Dark Foreground */
       margin-left: 2rem;
     }
 
     #network, #cpu, #memory {
-      color: @base04;            /* Keywords/Storage = Mauve */
+      color: @base05;            /* Keywords/Storage = Mauve */
       margin: 0 8px;
     }
 
@@ -124,12 +124,12 @@
     }
 
     #pulseaudio {
-      color: @base04;            /* Mauve */
+      color: @base05;            /* Mauve */
       margin: 0 8px;
     }
 
     #pulseaudio#microphone {
-      color: @base04;            /* Pink */
+      color: @base05;            /* Pink */
       margin: 0 8px;
     }
 
@@ -156,25 +156,26 @@
       padding: 0 8px;
       border-radius: 0 10px 10px 0;
     }
-
-    #tray, #custom-weather {
+    #custom-weather {
       margin: 0 8px;
-      color: @base04;            /* Dark Foreground */
+      color: @base05;
+      font-weight: bold;
     }
+
 
     #custom-notification {
       font-size: 16px;
       margin: 0 8px;
-      color: @base04;            /* Dark Foreground */
+      color: @base08;            /* Dark Foreground */
     }
 
     #keyboard-state label {
-      color: @base01;           /* Light Foreground */
+      color: @base03;           /* Light Foreground */
       margin: 0 8px;
     }
 
     #keyboard-state label.locked {
-      color: @base08;            /* Default Foreground */
+      color: @base09;            /* Default Foreground */
     }
 
     #custom-nixicon {
@@ -188,7 +189,10 @@
 
   
   /*
-
+    #tray, #custom-weather {
+      margin: 0 8px;
+      color: @base05;           
+    }
   "base00": #1b1c17,
   #base01#: #842313#,
   #base02#: #906021#,

@@ -11,8 +11,8 @@
 
          # active_border = "rgba(FF4500ee) rgba(00FFFFee) rgba(FFD700ee) rgba(8A2BE2ee) 45deg";
          # inactive_border = "rgba(000000aa)";
-        "col.inactive_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base00})";
-        "col.active_border" = lib.mkForce "rgb(${config.stylix.base16Scheme.base08})";
+        "col.inactive_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base00})";
+        "col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base08})";
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";

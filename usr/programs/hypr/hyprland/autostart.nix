@@ -10,7 +10,7 @@
         "hyprpaper"
         "hypridle"
         "swaync" # notification
-        "waybar"
+        #waybar
         # "hyprctl setcursor Bibata-Modern-Classic 24"
         "kdeconnect-indicator"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"

@@ -20,6 +20,7 @@
     anki
     drawio
     fiji
+    gnome-clocks
     jabref
     libreoffice-still
     localsend
@@ -116,6 +117,7 @@
     zoxide
 
     # System Customization
+    banana-cursor
     bibata-cursors
     eyedropper
     gnome-control-center

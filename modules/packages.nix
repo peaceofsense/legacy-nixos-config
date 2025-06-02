@@ -143,6 +143,7 @@
     luajitPackages.luarocks
     vscodium-fhs
     wtype
+    tmux
 
     # Networking and Communication
     discord

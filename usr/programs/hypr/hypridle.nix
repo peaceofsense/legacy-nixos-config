@@ -1,30 +1,49 @@
+{ config, pkgs, ... }:
+
 {
+  # ... other configurations ...
+
+  # Ensure hyprlock is enabled and configured via Home Manager
+  # programs.hyprlock = {
+  #   enable = true;
+  #   # ... your hyprlock specific settings
+  # };
+
   services.hypridle = {
     enable = true;
-
+    package = pkgs.hypridle; # Or your preferred hypridle package
     settings = {
       general = {
-        # Run hyprlock only if not already running
-        lock_cmd = "pidof hyprlock || hyprlock";
+        lock_cmd = "${pkgs.hyprlock}/bin/hyprlock";           # Correct
+        unlock_cmd = "notify-send 'Screen Unlocked'";
         before_sleep_cmd = "loginctl lock-session";
-        after_sleep_cmd = "hyprctl dispatch dpms on";
+        after_sleep_cmd = "notify-send 'Woke up!'";
+        ignore_dbus_inhibit = false; #should obey inhibit calls from dbus
+        ignore_logind_inhibit = false;
       };
 
-      listeners = [
+      listener = [
         {
-          timeout = 600;  # 10 minutes
-          on_timeout = "loginctl lock-session";
+          timeout = 300;
+          on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl set 10%";
+          on-resume = "${pkgs.brightnessctl}/bin/brightnessctl set 100%";
         }
         {
-          timeout = 660;  # 11 minutes
-          on_timeout = "hyprctl dispatch dpms off";
-          on_resume = "hyprctl dispatch dpms on";
+          timeout = 600;
+          on-timeout = "${pkgs.hyprlock}/bin/hyprlock";
         }
         {
-          timeout = 1800; # 30 minutes
-          on_timeout = "systemctl suspend";
+          timeout = 900;
+          on-timeout = "systemctl suspend";
+        }
+        {
+          timeout = 900;
+          on-timeout = "hyprctl dispatch dpms off";
+          on-resume = "hyprctl dispatch dpms on";
         }
       ];
     };
   };
+
+  # ... other configurations ...
 }

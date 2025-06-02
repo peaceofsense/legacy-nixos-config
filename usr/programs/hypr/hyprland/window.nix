@@ -8,6 +8,7 @@
       "workspace 1, class:(obsidian)"
       "workspace 2, class:(zen)"
       "workspace 2, class:(firefox)"
+      "workspace 7, class:(steam)"
       # "float,class:^(kitty)$,title:^(kitty)$"
       # "workspace 2 silent, initialClass:(firefox)"
       # "workspace 3 silent, class:(thunar)"

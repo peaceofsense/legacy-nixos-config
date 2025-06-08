@@ -164,6 +164,7 @@
     fswebcam
     libheif
     libraw
+    ncspot
     nufraw
     obs-studio
     playerctl

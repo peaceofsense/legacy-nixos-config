@@ -25,10 +25,9 @@
     libreoffice-still
     localsend
     obsidian
-    ollama
-    kdePackages.okular    
+    kdePackages.okular
+    onlyoffice-desktopeditors    
     # opentabletdriver
-    mame
     pandoc
     pdfarranger
     syncthing

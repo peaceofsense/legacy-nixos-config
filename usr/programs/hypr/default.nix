@@ -18,8 +18,8 @@
       # Monitors
       monitor = [
         #"monitor = ,preferred,auto-up,1" # Uncomment for quick fix if needed
-        #"eDP-1, 1920x1080, -1600x200, 1.2"
-        "eDP-1, 1920x1080, -1920x200, 1"
+        "eDP-1, 1920x1080, -1600x200, 1.2"
+        #"eDP-1, 1920x1080, -1920x200, 1"
 
         # "DP-1, 1920x1080,1920x100, 1"
         "HDMI-A-2, 1920x1080@60,0x0, 1"

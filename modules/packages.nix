@@ -6,6 +6,7 @@
     (with pkgsUnstable; [
       # Unstable here
     yazi
+    quickshell
     ])
 
     ++
@@ -26,7 +27,6 @@
     localsend
     obsidian
     kdePackages.okular
-    onlyoffice-desktopeditors    
     # opentabletdriver
     pandoc
     pdfarranger

@@ -6,7 +6,6 @@
     (with pkgsUnstable; [
       # Unstable here
     yazi
-    quickshell
     ])
 
     ++
@@ -32,6 +31,7 @@
     pdfarranger
     syncthing
     texliveFull
+    texmaker
     texstudio
     thunderbird
     xgalagapp
@@ -116,11 +116,13 @@
     zoxide
 
     # System Customization
+    aubio
     banana-cursor
     bibata-cursors
     eyedropper
     gnome-control-center
     gnomeExtensions.gsconnect
+    pipewire
     neofetch
     nwg-look
     pywal

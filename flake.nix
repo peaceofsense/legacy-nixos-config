@@ -18,15 +18,12 @@
       #url = "github:Svenum/Solaar-Flake/main"; # Uncomment line for latest unstable version
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
-    caelestia-shell = {
-      url = "github:your-repo/caelestia-shell-nixos";
-      inputs.nixpkgs.follows = "nixpkgsStable";
-    };
+
     
   };
 
   outputs = 
-  { self, nixpkgsStable, nixpkgsUnstable, home-manager, stylix, solaar, caelestia-shell, ... } @ inputs:
+  { self, nixpkgsStable, nixpkgsUnstable, home-manager, stylix, solaar, ... } @ inputs:
     let
       lib = nixpkgsStable.lib; # It is like pass nixpkgs to this var
       system = "x86_64-linux";
@@ -50,14 +47,7 @@
             }
             stylix.nixosModules.stylix
             solaar.nixosModules.default
-            caelestia-shell.nixosModules.default {
-              services.caelestia-shell.enable = true;
-              # Optional: customize configuration
-              services.caelestia-shell.config = {
-              bar.workspaces.shown = 7;
-              dashboard.weatherLocation = "40.7128,-74.0060"; # NYC coordinates
-              };
-            }
+
           ];
         specialArgs = {
           inherit username;

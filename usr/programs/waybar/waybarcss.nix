@@ -125,12 +125,12 @@
 
     #wireplumber {
       color: @base05;            /* Mauve */
-      margin: 0 8px;
+      margin: 0 4px;
     }
 
     #wireplumber#microphone {
       color: @base05;            /* Pink */
-      margin: 0 8px;
+      margin: 0 4px;
     }
 
     #clock {
@@ -165,7 +165,8 @@
 
     #custom-notification {
       font-size: 16px;
-      margin: 0 8px;
+      margin-right: 8px;
+      margin-left: 4px;
       color: @base08;            /* Dark Foreground */
     }
 
@@ -182,6 +183,11 @@
       font-size: 20px;
       color: @base09;            /* Orange/Peach */
       margin: 0 8px;
+    }
+
+    #tray, #custom-weather {
+      margin: 0 8px;
+      color: @base05;           
     }
   '';
 }

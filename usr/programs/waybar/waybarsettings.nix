@@ -6,7 +6,7 @@
         layer = "top";
         position = "top";
         spacing = 0;
-        height = 26;
+        height = 22;
         modules-left = [
           "hyprland/workspaces"
         ];
@@ -15,12 +15,13 @@
         ];
         modules-right = [
           # "custom/dropbox"
-          "tray"
+          "custom/weather"
+          "memory"
           "keyboard-state"
           "bluetooth"
           "network"
           #"cpu"
-          "power-profiles-daemon"
+          "tray"
           "wireplumber"
           "custom/notification"
           "battery"
@@ -115,7 +116,7 @@
           on-click = "blueman-manager";
         };
         wireplumber = {
-          format = "{icon}{volume}%";
+          format = "{icon}";
           format-alt-click = "click-right";
           format-muted = "";
           format-icons = {
@@ -172,7 +173,20 @@
             locked = "";
             unlocked = "";
           };
-        };        
+        };    
+        "custom/weather" = {
+          format = "{}°";
+          tooltip = true;
+          interval = 1800;
+          exec = "wttrbar";
+          return-type = "json";
+        };    
+
+        "memory" = {
+          interval = 30;
+          format = " {}%";
+          max-length = 10;
+        };
         # "custom/dropbox" = {
         #   format = "";
         #   on-click = "nautilus ~/Dropbox";

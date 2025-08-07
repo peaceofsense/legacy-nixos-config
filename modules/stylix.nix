@@ -6,9 +6,17 @@
         stylix.polarity = "dark";         # Affects calander and wttr module
         # Optional: use a base16 color scheme
         #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-        stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-        #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/github.yaml";
+
         #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/darcula.yaml";
+        
+        # similar
+        stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+        #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+
+        # light
+        #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-dawn.yaml";
+        #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/github.yaml";
+
         stylix.cursor = {
             #name = "Bibata-Modern-Ice";     
             name = "Banana";

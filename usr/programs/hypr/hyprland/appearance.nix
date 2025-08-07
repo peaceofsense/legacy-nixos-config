@@ -37,7 +37,7 @@
       };
 
       animations = {
-        enabled = true;
+        enabled = false;
         animation = [
           "global, 1, 4, default"
           "workspaces, 1, 5, default, slidefade 10%"

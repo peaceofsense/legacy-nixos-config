@@ -5,7 +5,6 @@
     ./obsidian.nix
     ./rofi
     ./starship
-    ./swaync
     ./vscode
     ./waybar
     ./yazi.nix

@@ -23,7 +23,7 @@
   };
 
   outputs = 
-  { self, nixpkgsStable, nixpkgsUnstable, home-manager, stylix, solaar, ... } @ inputs:
+  { self, nixpkgsStable, nixpkgsUnstable, home-manager, stylix,  solaar, ... } @ inputs:
     let
       lib = nixpkgsStable.lib; # It is like pass nixpkgs to this var
       system = "x86_64-linux";
@@ -47,7 +47,7 @@
             }
             stylix.nixosModules.stylix
             solaar.nixosModules.default
-
+          
           ];
         specialArgs = {
           inherit username;

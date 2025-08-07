@@ -1,11 +1,15 @@
-{ pkgs, pkgsUnstable, astal, ... }: {
+{ pkgs, pkgsUnstable, ... }: {
 
   # List packages installed in system profile.
 
   environment.systemPackages = 
     (with pkgsUnstable; [
       # Unstable here
-    yazi
+      material-symbols
+      quickshell
+      yazi
+      zed-editor
+
     ])
 
     ++
@@ -35,7 +39,7 @@
     texstudio
     thunderbird
     xgalagapp
-    xournalpp
+    #xournalpp
     zathura
     zotero
 
@@ -55,10 +59,12 @@
     blueman    
     brightnessctl
     btop
+    cava
     dconf
     ddcutil
     ddcui
     feh
+    fish
     fzf
     fprintd
     nautilus
@@ -81,11 +87,14 @@
     hyprshot
     kitty
     kittysay
+    libqalculate
     libnotify
     #libstdcxx5
     libtiff
+    lm_sensors
     loupe
     neovim
+    networkmanager
     pamixer
     parted
     polkit_gnome
@@ -100,6 +109,7 @@
     smartmontools
     sticky
     stow
+    swappy
     swaynotificationcenter
     tealdeer
     trash-cli
@@ -111,7 +121,6 @@
     wl-clipboard
     xclip
     xdg-utils
-    zed-editor
     zip
     zoxide
 
@@ -149,7 +158,7 @@
     # Networking and Communication
     discord
     ferdium
-    fractal
+    #fractal
     freerdp3
     github-desktop
     kdePackages.kdeconnect-kde

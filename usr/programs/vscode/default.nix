@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 
-    stylix.targets.vscode.enable = true;
+    stylix.targets.vscode.enable = false;
     home.file.".config/Code/User/globalStorage/alefragnani.project-manager/projects.json".source = ./projects.json;
     home.file.".config/Code/User/globalStorage/alefragnani.project-manager/fau-evt.code-workspace".source = ./fau-evt.code-workspace;
     home.file.".config/Code/User/globalStorage/alefragnani.project-manager/m17.code-workspace".source = ./m17.code-workspace;

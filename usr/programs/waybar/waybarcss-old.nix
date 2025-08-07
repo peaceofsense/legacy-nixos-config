@@ -26,7 +26,7 @@
       background: @base00;       /* Default Background */
       color: @base05;            /* Default Foreground */
       margin: 5px 5px;
-      border-radius: 0px;
+      border-radius: 8px;
       border: 1px solid @base01; /* Lighter Background */
     }
 
@@ -123,12 +123,12 @@
       margin-left: 10px;
     }
 
-    #wireplumber {
+    #pulseaudio {
       color: @base05;            /* Mauve */
       margin: 0 8px;
     }
 
-    #wireplumber#microphone {
+    #pulseaudio#microphone {
       color: @base05;            /* Pink */
       margin: 0 8px;
     }

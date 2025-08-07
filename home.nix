@@ -54,7 +54,6 @@
 
     #theme.package = pkgs.adw-gtk3;
     #theme.name = "adw-gtk3";
-
     iconTheme.package = pkgs.papirus-icon-theme;
     iconTheme.name = "Papirus-Dark";
 

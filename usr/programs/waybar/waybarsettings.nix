@@ -54,8 +54,8 @@
         };
         clock = {
           interval = 1;
-          format = "{:%A %H:%M:%S}";
-          format-alt = "{:%d %B W%V %Y}";
+          format = "{:%d %B %H:%M:%S}";
+          format-alt = "{:%A W%V %Y}";
           # Tooltip showing the calendar with some colors
           tooltip-format = "<span>{calendar}</span>";
           calendar = {
@@ -186,6 +186,7 @@
           interval = 30;
           format = " {}%";
           max-length = 10;
+          on-click = "kitty -e btop";
         };
         # "custom/dropbox" = {
         #   format = "";

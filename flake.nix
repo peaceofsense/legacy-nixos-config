@@ -18,12 +18,16 @@
       #url = "github:Svenum/Solaar-Flake/main"; # Uncomment line for latest unstable version
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgsStable";
+    };
 
     
   };
 
   outputs = 
-  { self, nixpkgsStable, nixpkgsUnstable, home-manager, stylix,  solaar, ... } @ inputs:
+  { self, nixpkgsStable, nixpkgsUnstable, home-manager, zen-browser, stylix, solaar, ... } @ inputs:
     let
       lib = nixpkgsStable.lib; # It is like pass nixpkgs to this var
       system = "x86_64-linux";
@@ -34,26 +38,29 @@
     in {
 
     nixosConfigurations = {
-      monolith = lib.nixosSystem { # System Name
+      monolith = lib.nixosSystem {
         inherit system;
-	      modules = 
-          [
-            ./configuration.nix
-            home-manager.nixosModules.home-manager {
-              home-manager.useGlobalPkgs = true;
-              #home-manager.useUserPackages = true;
-              home-manager.users.peaceofsense = import ./home.nix;
-              # Optionally: home-manager.extraSpecialArgs = { inherit inputs; };
-            }
-            stylix.nixosModules.stylix
-            solaar.nixosModules.default
-          
-          ];
+        modules = [
+          ./configuration.nix
+
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.users.peaceofsense = import ./home.nix;
+          }
+
+          stylix.nixosModules.stylix
+          solaar.nixosModules.default
+
+          { environment.systemPackages = [ inputs.zen-browser.packages.${system}.default ]; }
+
+        ];
+
         specialArgs = {
           inherit username;
           inherit pkgsUnstable;
         };
       };
+
     };
     /*
     homeConfigurations = {

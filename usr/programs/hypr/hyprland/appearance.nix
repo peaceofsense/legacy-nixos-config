@@ -5,9 +5,9 @@
   wayland.windowManager.hyprland = {
     settings = {
       general = {
-        gaps_in = 1;
-        gaps_out = 1.5;
-        border_size = 3;
+        gaps_in = 2;
+        gaps_out = 2;
+        border_size = 2;
 
          # active_border = "rgba(FF4500ee) rgba(00FFFFee) rgba(FFD700ee) rgba(8A2BE2ee) 45deg";
          # inactive_border = "rgba(000000aa)";

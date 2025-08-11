@@ -5,7 +5,6 @@
     settings = {
       # AUTOSTART
       exec-once = [
-        "[workspace 9 silent] ferdium"
         "[workspace 8 silent] thunderbird"
         "hyprpaper"
         "swaync" # notification

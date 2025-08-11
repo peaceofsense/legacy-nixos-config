@@ -15,6 +15,7 @@
     ++
 
     (with pkgs; [
+
     # Dictionary
     hunspellDicts.en_GB-ise
     hunspellDicts.en_GB-ize
@@ -157,7 +158,7 @@
 
     # Networking and Communication
     discord
-    ferdium
+    #ferdium
     #fractal
     freerdp3
     github-desktop

@@ -31,9 +31,11 @@
     localsend
     obsidian
     kdePackages.okular
-    # opentabletdriver
+    opentabletdriver
     pandoc
     pdfarranger
+    rnote libinput
+    slack
     syncthing
     texliveFull
     texmaker

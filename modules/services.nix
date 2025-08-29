@@ -15,16 +15,28 @@
   # Disable power-profiles-daemon.
   services.power-profiles-daemon.enable = false;
 
-  # TUI login
-  services.greetd = {
-  enable = true;
-  settings = {
-    default_session = {
-      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd ${pkgs.hyprland}/bin/Hyprland";
-      user = "peaceofsense";
+
+
+  services = {
+    greetd = {
+      enable = true;
+      settings = {
+        initial_session = {
+          # Change "Hyprland" to the command to run your window manager. 
+          command = "Hyprland";
+          user = "peaceofsense";
+        };
+
+        default_session = {
+          # Again here just change "-cmd Hyprland" to "-cmd your-start-command".
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --remember --remember-user-session --time --cmd Hyprland";
+          # DO NOT CHANGE THIS USER
+          user = "greeter";
+        };
       };
     };
   };
+
 
 
   # Display Manager Settings.

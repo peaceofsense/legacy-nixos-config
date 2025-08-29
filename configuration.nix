@@ -96,9 +96,9 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # Default shells
-  environment.shells = with pkgs; [bash zsh];
-  users.defaultUserShell = pkgs.bash;
-  programs.zsh.enable = false;
+  environment.shells = with pkgs; [bash fish];
+  users.defaultUserShell = pkgs.fish;
+  programs.fish.enable = true;
 
   # OpenGL
   hardware.graphics = {

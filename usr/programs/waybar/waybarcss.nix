@@ -135,7 +135,7 @@
 
     #clock {
       font-family: "Fira Code Nerd Font", monospace;
-      color: @base0D;            /* Blue */
+      color: @base05;            /* Blue */
       margin: 0 8px;
       padding: 0 10px;
     }

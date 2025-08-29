@@ -1,6 +1,6 @@
 {
   imports = [
-    ./bash.nix
+    #./bash.nix
     ./mimeApps.nix
     # ./catppuccin.nix
   ];

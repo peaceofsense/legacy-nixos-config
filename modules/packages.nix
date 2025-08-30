@@ -101,6 +101,7 @@
     pamixer
     parted
     polkit_gnome
+    pv
     rar
     ripgrep
     ripgrep-all

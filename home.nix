@@ -134,11 +134,114 @@
           rm -f "$tmp"
       end
 
+      function extract
+          for archive in $argv
+              if test -f "$archive"
+                  switch $archive
+                      case '*.tar.bz2'
+                          tar xvjf "$archive"
+                      case '*.tar.gz'
+                          tar xvzf "$archive"
+                      case '*.bz2'
+                          bunzip2 "$archive"
+                      case '*.rar'
+                          rar x "$archive"
+                      case '*.gz'
+                          gunzip "$archive"
+                      case '*.tar'
+                          tar xvf "$archive"
+                      case '*.tbz2'
+                          tar xvjf "$archive"
+                      case '*.tgz'
+                          tar xvzf "$archive"
+                      case '*.zip'
+                          unzip "$archive"
+                      case '*.Z'
+                          uncompress "$archive"
+                      case '*.7z'
+                          7z x "$archive"
+                      case '*'
+                          echo "don't know how to extract '$archive'..."
+                  end
+              else
+                  echo "'$archive' is not a valid file!"
+              end
+          end
+      end
+
+      function ftext
+          if test (count $argv) -eq 0
+              echo "Usage: ftext <search_term>"
+              return 1
+          end
+
+          set search_term $argv[1]
+          grep -iIHrn --color=always "$search_term" . | less -r
+      end
+
+      function mkdirg
+          mkdir -p "$argv[1]"
+          cd "$argv[1]"
+      end
+
+      function mvg
+          if test -d "$argv[2]"
+              mv "$argv[1]" "$argv[2]" && cd "$argv[2]"
+          else
+              mv "$argv[1]" "$argv[2]"
+          end
+      end
+
+      function cpg
+          if test -d "$argv[2]"
+              cp "$argv[1]" "$argv[2]" && cd "$argv[2]"
+          else
+              cp "$argv[1]" "$argv[2]"
+          end
+      end
+
+      function cpp
+          pv "$argv[1]" > "$argv[2]"
+      end
+
 
       # Aliases
       alias rebuild='nixos_rebuild'
       alias nixos-update='nix flake update --flake ~/nixos-config'
       alias pickfont='fc-list :family | cut -d: -f2 | sort | uniq | fzf'
+      alias vi='nvim'
+      alias rm='trash -v'
+
+
+      alias la='ls -Alh'                # show hidden files
+      alias ls='ls -aFh --color=always' # add colors and file type extensions
+      alias lx='ls -lXBh'               # sort by extension
+      alias lk='ls -lSrh'               # sort by size
+      alias lc='ls -lcrh'               # sort by change time
+      alias lu='ls -lurh'               # sort by access time
+      alias lr='ls -lRh'                # recursive ls
+      alias lt='ls -ltrh'               # sort by date
+      alias lm='ls -alh |more'          # pipe through 'more'
+      alias lw='ls -xAh'                # wide listing format
+      alias ll='ls -Fls'                # long listing format
+      alias labc='ls -lap'              #alphabetical sort
+      alias lf="ls -l | egrep -v '^d'"  # files only
+      alias ldir="ls -l | egrep '^d'"   # directories only
+
+      alias f="find . | grep " # Check find text top
+      alias tree='tree -CAhF --dirsfirst'
+      alias treed='tree -CAFd'
+
+      alias mktar='tar -cvf'
+      alias mkbz2='tar -cvjf'
+      alias mkgz='tar -cvzf'
+      alias untar='tar -xvf'
+      alias unbz2='tar -xvjf'
+      alias ungz='tar -xvzf'
+
+
+
+
 
 
     '';

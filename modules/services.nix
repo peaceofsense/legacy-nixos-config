@@ -15,8 +15,7 @@
   # Disable power-profiles-daemon.
   services.power-profiles-daemon.enable = false;
 
-
-
+  # Login
   services = {
     greetd = {
       enable = true;
@@ -139,7 +138,7 @@
     };
   };
   
-  services.tailscale.enable = true;
+  #services.tailscale.enable = true;
   
   services.flatpak.enable = true;
   

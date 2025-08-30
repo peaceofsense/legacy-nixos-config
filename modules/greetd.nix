@@ -1,4 +1,4 @@
-  # TUI login
+  # TUI login BACKUP
   services.greetd = {
     enable = false;
     settings = {

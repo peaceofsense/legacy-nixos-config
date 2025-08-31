@@ -39,58 +39,61 @@
         end
 
         function git-push
-            # Use current directory if no argument provided
-            if test (count $argv) -eq 0
-                set repo_dir (pwd)
+            # Use the argument if given, else current directory
+            if test (count $argv) -ge 1
+                set repo_dir $argv[1]
             else
-                set repo_dir (realpath $argv[1])
+                set repo_dir (pwd)
             end
+
+            # Make sure it's an absolute path
+            set repo_dir (readlink -f $repo_dir)
 
             # Check if directory exists
             if not test -d $repo_dir
-                echo "Error: Directory '$repo_dir' does not exist."
+                echo "Error: Directory '$repo_dir' does not exist." >&2
                 return 1
             end
 
-            # Check if it is a git repository
+            # Check if it's a Git repository
             if not test -d "$repo_dir/.git"
-                echo "Error: '$repo_dir' is not a Git repository."
+                echo "Error: '$repo_dir' is not a Git repository." >&2
                 return 1
             end
 
-            # Get current branch (default to main)
-            set branch (git -C $repo_dir symbolic-ref --short HEAD ^/dev/null)
-            if test -z "$branch"
-                set branch main
+            # Get current branch
+            set branch (git -C $repo_dir rev-parse --abbrev-ref HEAD)
+            if test "$branch" = "HEAD" -o -z "$branch"
+                echo "Error: Detached HEAD. Checkout a branch first." >&2
+                return 1
             end
 
             # Check for uncommitted changes
             if not git -C $repo_dir diff-index --quiet HEAD --
                 echo "Changed files:"
                 git -C $repo_dir diff --name-only HEAD
-
-                # Prompt for commit message
                 read -P "Enter commit message: " message
                 if test -z "$message"
-                    echo "Error: Commit message cannot be empty."
+                    echo "Error: Commit message cannot be empty." >&2
                     return 1
                 end
-
                 git -C $repo_dir add .
                 git -C $repo_dir commit -m "$message"
             else
                 echo "No changes to commit."
             end
 
-            # Prompt for branch to push to
-            read -P "Enter branch name to push to (default: $branch): " input_branch
+            # Push
+            read -P "Enter branch to push to (default: $branch): " input_branch
             if test -z "$input_branch"
                 set input_branch $branch
             end
-
-            # Push
             git -C $repo_dir push origin $input_branch
         end
+
+
+
+
 
         # NixOS rebuild function
         function nixos_rebuild

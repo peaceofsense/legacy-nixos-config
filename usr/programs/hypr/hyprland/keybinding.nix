@@ -16,6 +16,8 @@
         "$mainMod, F, fullscreen, 0"
         "$mainMod, D, exec, $menu"
         "$mainMod, C, exec, rofi -show calc"
+        "$mainMod,Tab, exec, rofi -show window"
+
         "$mainMod, period, exec, rofimoji --action copy"
         # "$mainMod, TAB, exec, $windowMenu"
         "$mainMod, M, fullscreen, 1"

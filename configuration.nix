@@ -16,18 +16,19 @@
     ];
 
   # Bootloader.
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub.enable = true;
-  boot.loader.grub.useOSProber = true;
-  boot.loader.grub.devices = [ "nodev" ] ;
-  boot.loader.grub.efiSupport = true;
-  boot.loader.grub.theme = # No build step needed
-    pkgs.fetchFromGitHub {
-      owner = "shvchk";
-      repo = "fallout-grub-theme";
-      rev = "80734103d0b48d724f0928e8082b6755bd3b2078";
-      sha256 = "sha256-7kvLfD6Nz4cEMrmCA9yq4enyqVyqiTkVZV5y4RyUatU=";
-  };
+  #boot.loader.grub.enable = true;
+  #boot.loader.grub.useOSProber = true;
+  #boot.loader.grub.devices = [ "nodev" ] ;
+  #boot.loader.grub.efiSupport = true;
+  #boot.loader.grub.theme = # No build step needed
+  #  pkgs.fetchFromGitHub {
+  #    owner = "shvchk";
+  #    repo = "fallout-grub-theme";
+  #    rev = "80734103d0b48d724f0928e8082b6755bd3b2078";
+  #    sha256 = "sha256-7kvLfD6Nz4cEMrmCA9yq4enyqVyqiTkVZV5y4RyUatU=";
+  #};
 
   # Kernel modules load
   # boot.extraModulePackages = [ config.boot.kernelModules.ddcci-driver ];
@@ -38,12 +39,12 @@
   '';
 
   # Swap fileSystems
-  swapDevices = [
-    { device = "/swapfile";
-      size = 8192 * 2; # MB
-      priority = 16;
-    }
-  ];
+  #swapDevices = [
+  #  { device = "/swapfile";
+  #    size = 8192 * 2; # MB
+  #    priority = 16;
+  #  }
+  #];
 
 
   # Disable waiting for NetworkManager to be online (speeds up boot)
@@ -168,7 +169,7 @@
 
   nix.settings.download-buffer-size = 524288000;
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

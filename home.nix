@@ -214,6 +214,7 @@
         alias pickfont='fc-list :family | cut -d: -f2 | sort | uniq | fzf'
         alias vi='nvim'
         alias rm='trash -v'
+        alias gparted='sudo -E gparted'
 
 
         alias la='ls -Alh'                # show hidden files

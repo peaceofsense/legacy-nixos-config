@@ -37,7 +37,7 @@
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$fileManager" = "nautilus --new-window";
-      "$powermenu" = "rofi -show power-menu -modi power-menu:~/dotfiles/.config/rofi/power-menu";
+      "$powermenu" = "rofi -show power-menu -modi power-menu:~/nixos-config/usr/programs/rofi/power-menu";
       "$menu" = "rofi -show drun";
 
       # Input configuration

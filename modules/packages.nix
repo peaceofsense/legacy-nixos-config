@@ -5,8 +5,6 @@
   environment.systemPackages = 
     (with pkgsUnstable; [
       # Unstable here
-      material-symbols
-      quickshell
       yazi
       zed-editor
 
@@ -22,12 +20,10 @@
     hunspellDicts.de_DE
 
     # Office and Productivity
-    anki
-    drawio
     fiji
     gnome-clocks
     jabref
-    libreoffice-still
+    libreoffice-fresh
     localsend
     obsidian
     kdePackages.okular
@@ -38,19 +34,15 @@
     slack
     syncthing
     texliveFull
-    texmaker
     texstudio
     thunderbird
-    xgalagapp
     #xournalpp
-    zathura
     zotero
 
     # Disk and Filesystem Utilities
     # ags
     cifs-utils
     exfatprogs
-    eww
     gparted
     hfsprogs
     ntfs3g
@@ -66,6 +58,7 @@
     dconf
     ddcutil
     ddcui
+    fastfetch
     feh
     fish
     fzf
@@ -133,8 +126,6 @@
     banana-cursor
     bibata-cursors
     eyedropper
-    gnome-control-center
-    gnomeExtensions.gsconnect
     pipewire
     neofetch
     nwg-look
@@ -191,6 +182,9 @@
     gnome-boxes
 
     # Security & Privacy
+    bleachbit
+    gnome-obfuscate
+    nftables
     proton-pass
     protonvpn-cli
     ente-cli

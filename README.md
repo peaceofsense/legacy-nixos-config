@@ -1,16 +1,8 @@
-# nixos
-
-My NixOS configuration
-
-Symbolic link pattern bash
-
 # NixOS Configuration
 
-This repository contains the configuration files for NixOS. The configuration files are managed via symbolic links to facilitate version control and easy management.
+![alt text](image.png)
 
-## Symbolic Link Pattern
-
-The following symbolic links are set up in `/etc/nixos` to point to the configuration files in `/home/peaceofsense/nixos-config/nixos/`:
+This repository contains the configuration files for NixOS. The app configuration files are managed via home manager as an NixOS module.
 
 ```bash
 [peaceofsense@nixos:/etc/nixos]$ ls -l /etc/nixos

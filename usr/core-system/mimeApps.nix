@@ -4,23 +4,30 @@
 
     defaultApplications = {
       # Browsers
-      "text/html" = "firefox.desktop";
-      "x-scheme-handler/http" = "firefox.desktop";
-      "x-scheme-handler/https" = "firefox.desktop";
+      "text/html" = "zen-beta.desktop";
+      "x-scheme-handler/http" = "zen-beta.desktop";
+      "x-scheme-handler/https" = "zen-beta.desktop";
+      "x-scheme-handler/chrome" = "zen-beta.desktop";
+      "application/x-extension-htm" = "zen-beta.desktop";
+      "application/x-extension-html" = "zen-beta.desktop";
+      "application/x-extension-shtml" = "zen-beta.desktop";
+      "application/xhtml+xml" = "zen-beta.desktop";
+      "application/x-extension-xhtml" = "zen-beta.desktop";
+      "application/x-extension-xht" = "zen-beta.desktop";
 
       # Text
-      "text/plain" = "geany.desktop";
-      "text/markdown" = "geany.desktop";
-      "text/json" = "geany.desktop";
+      "text/plain" = "zeditor.desktop";
+      "text/markdown" = "zeditor.desktop";
+      "text/json" = "zeditor.desktop";
       "text/calendar" = "userapp-Thunderbird-WP7AU2.desktop";
 
       # PDFs
       "application/pdf" = "org.pwmt.zathura-pdf-mupdf.desktop";
 
       # Images (GNOME image viewer)
-      "image/png" = "org.gnome.Loupe.desktop ";
-      "image/jpeg" = "org.gnome.Loupe.desktop ";
-      "image/webp" = "org.gnome.Loupe.desktop ";
+      "image/png" = "org.gnome.Loupe.desktop";
+      "image/jpeg" = "org.gnome.Loupe.desktop";
+      "image/webp" = "org.gnome.Loupe.desktop";
       "image/tiff" = "fiji.desktop";
 
       # GIFs & videos

@@ -211,7 +211,7 @@
         # Aliases
         alias rebuild='nixos_rebuild'
         alias nixos-update='nix flake update --flake ~/nixos-config'
-        alias pickfont='fc-list :family | cut -d: -f2 | sort | uniq | fzf'
+        alias fontlist='fc-list :family | cut -d: -f2 | sort | uniq | fzf'
         alias vi='nvim'
         alias rm='trash -v'
         alias gparted='sudo -E gparted'

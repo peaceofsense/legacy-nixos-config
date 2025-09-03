@@ -18,6 +18,7 @@
       twemoji-color-font
       comfortaa
       inter
+      inter-nerdfont
       lato
       lexend
       jost

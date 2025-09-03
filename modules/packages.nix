@@ -186,7 +186,7 @@
     gnome-obfuscate
     nftables
     proton-pass
-    protonvpn-cli
+    protonvpn-gui
     ente-cli
     ente-auth
     gnupg # Signature and encryption lib

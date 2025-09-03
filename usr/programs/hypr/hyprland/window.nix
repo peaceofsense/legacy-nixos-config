@@ -28,6 +28,7 @@
       "float, initialTitle:(File Operation Progress)"
       "size 600 200, initialTitle:(File Operation Progress)"
       "suppressevent maximize, class:.*"
+      "size 1200 800, float,class:^(zen-beta)$,initialTitle:^(File Upload)$"
     ];
   };
 }

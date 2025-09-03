@@ -2,7 +2,7 @@
 
 ![alt text](image.png)
 
-This repository contains the configuration files for NixOS. The app configuration files are managed via home manager as an NixOS module.
+This repository contains the configuration files for NixOS. The app configuration files are managed via home manager as a NixOS module.
 
 ```bash
 [peaceofsense@nixos:/etc/nixos]$ ls -l /etc/nixos

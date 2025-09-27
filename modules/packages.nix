@@ -201,6 +201,7 @@
     mangohud
     wttrbar
     dotnet-runtime
+    lutris
     #(lutris.override {
     #   extraPkgs = pkgs: [
          # List package dependencies here

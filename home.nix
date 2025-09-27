@@ -215,6 +215,7 @@
         alias vi='nvim'
         alias rm='trash -v'
         alias gparted='sudo -E gparted'
+        alias caffinate='systemd-inhibit sleep 100000'
 
 
         alias la='ls -Alh'                # show hidden files

@@ -198,10 +198,10 @@
     android-tools
     cmatrix
     cowsay
-    mangohud
+    #mangohud
     wttrbar
     dotnet-runtime
-    lutris
+    #lutris
     #(lutris.override {
     #   extraPkgs = pkgs: [
          # List package dependencies here

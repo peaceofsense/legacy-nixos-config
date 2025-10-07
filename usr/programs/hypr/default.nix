@@ -18,16 +18,18 @@
       # Monitors
       monitor = [
         #"monitor = ,preferred,auto-up,1" # Uncomment for quick fix if needed
+        
+        # Defaults
         "eDP-1, 1920x1080, -1600x200, 1.2"
-        #"eDP-1, 1920x1080, -1920x200, 1"
-
-        # "DP-1, 1920x1080,1920x100, 1"
         "HDMI-A-2, 1920x1080@60,0x0, 1"
 
+        #"eDP-1, 1920x1080, -1920x200, 1"
+        # "DP-1, 1920x1080,1920x100, 1"
+        
+        # Monitors top and bottom
         #"HDMI-A-2,2560x1440,0x0,1"
         #"eDP-1,1920x1080,320x1440,1"
       ];
-      # Monitors top and bottom
 
 
       # Triple monitor

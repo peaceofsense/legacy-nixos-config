@@ -46,13 +46,13 @@
   
   # Enable Steam 
   programs.steam = {
-    enable = true;
+    enable = false;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
   };
 
-  programs.gamemode.enable = true;
+  programs.gamemode.enable = false;
 
   programs.dconf.enable = true;
 }

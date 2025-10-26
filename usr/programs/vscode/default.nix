@@ -6,7 +6,7 @@
     home.file.".config/Code/User/globalStorage/alefragnani.project-manager/m17.code-workspace".source = ./m17.code-workspace;
     home.file.".config/Code/User/globalStorage/alefragnani.project-manager/dotfiles.code-workspace".source = ./dotfiles.code-workspace;
     programs.vscode = {
-        enable = true;
+        enable = false;
         profiles.default ={
             enableExtensionUpdateCheck = false;
             extensions = with pkgs.vscode-extensions; [

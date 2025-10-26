@@ -30,6 +30,7 @@
     opentabletdriver
     pandoc
     pdfarranger
+    protonmail-desktop
     rnote libinput
     slack
     syncthing

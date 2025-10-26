@@ -23,11 +23,12 @@
     }
 
     #waybar {
-      background: @base00;       /* Default Background */
+      background: rgba(30, 30, 46, 0.3);
+      /* background: @base00;       Default Background */
       color: @base05;            /* Default Foreground */
       margin: 5px 5px;
       border-radius: 0px;
-      border: 1px solid @base01; /* Lighter Background */
+      /* border: 1px solid @base01; Lighter Background */
     }
 
     #workspaces {

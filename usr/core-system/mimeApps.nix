@@ -22,7 +22,7 @@
       "text/calendar" = "userapp-Thunderbird-WP7AU2.desktop";
 
       # PDFs
-      "application/pdf" = "org.pwmt.zathura-pdf-mupdf.desktop";
+      "application/pdf"="org.gnome.Papers.desktop";
 
       # Images (GNOME image viewer)
       "image/png" = "org.gnome.Loupe.desktop";

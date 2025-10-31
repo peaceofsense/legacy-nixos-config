@@ -21,7 +21,7 @@
           "bluetooth"
           "network"
           #"cpu"
-          "tray"
+          #"tray"
           "wireplumber"
           "custom/notification"
           "battery"

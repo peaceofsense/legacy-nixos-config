@@ -26,9 +26,9 @@
     libreoffice-fresh
     localsend
     obsidian
-    kdePackages.okular
     opentabletdriver
     pandoc
+    papers
     pdfarranger
     protonmail-desktop
     rnote libinput

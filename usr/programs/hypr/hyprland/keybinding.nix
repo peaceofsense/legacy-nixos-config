@@ -15,8 +15,8 @@
         "$mainMod, V, togglefloating,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod, D, exec, $menu"
-        "$mainMod, C, exec, rofi -show calc"
-        "$mainMod,Tab, exec, rofi -show window"
+        "$mainMod, C, exec, noctalia-shell ipc call launcher calculator"
+        #"$mainMod,Tab, exec, rofi -show window"
 
         "$mainMod, period, exec, rofimoji --action copy"
         # "$mainMod, TAB, exec, $windowMenu"
@@ -28,7 +28,7 @@
         ", INSERT, exec, hyprshot -m output -o ~/Pictures/Screenshots/"
         "$mainMod CTRL SHIFT, INSERT, exec, hyprshot -m region -o ~/Pictures/Screenshots/"
         "$mainMod+Shift, U, exec, setxkbmap -layout us"
-        "$mainMod+Shift, L, exec, hyprlock"
+        "$mainMod+Shift, L, exec, noctalia-shell ipc call lockScreen lock"
         # Audio and media
         # ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
         # ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"

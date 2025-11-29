@@ -1,12 +1,12 @@
 {
   imports = [
     ./hypr
-    ./kitty.nix
+    #./kitty.nix
     ./obsidian.nix
-    ./rofi
+    #./rofi
     ./starship
-    ./vscode
-    ./waybar
+    #./vscode
+    #./waybar
     ./yazi.nix
   ];
 

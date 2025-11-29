@@ -1,7 +1,7 @@
 { config, pkgs, pkgsUnstable, ... }:
 
     {
-        stylix.enable = true;
+        stylix.enable = false;
         stylix.image = ./wallpapers/wallhaven.png;   # Path to your wallpaper
         stylix.polarity = "dark";         # Affects calander and wttr module
         # Optional: use a base16 color scheme

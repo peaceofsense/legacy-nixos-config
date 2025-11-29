@@ -23,11 +23,20 @@
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
 
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgsUnstable";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgsUnstable";
+      inputs.quickshell.follows = "quickshell";  # Use same quickshell version
+    };
     
   };
 
   outputs = 
-  { self, nixpkgsStable, nixpkgsUnstable, home-manager, zen-browser, stylix, solaar, ... } @ inputs:
+  { self, nixpkgsStable, nixpkgsUnstable, home-manager, zen-browser, stylix, solaar, noctalia, quickshell, ... } @ inputs:
     let
       lib = nixpkgsStable.lib; # It is like pass nixpkgs to this var
       system = "x86_64-linux";
@@ -52,6 +61,13 @@
           solaar.nixosModules.default
 
           { environment.systemPackages = [ inputs.zen-browser.packages.${system}.default ]; }
+
+          ({
+            environment.systemPackages = with pkgsUnstable; [
+              noctalia.packages.${system}.default
+              quickshell # ← after overlay, this works
+            ];
+          })
 
         ];
 

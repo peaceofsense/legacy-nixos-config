@@ -78,7 +78,7 @@
     htop
     hypridle
     hyprland
-    hyprlock
+    #hyprlock
     hyprpaper
     hyprpicker
     hyprshot

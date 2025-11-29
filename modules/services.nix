@@ -78,6 +78,8 @@
   # CUPS for printing documents.
   services.printing.enable = true;
   
+  services.upower.enable = true;
+  
   # TLP for power management.
   services.tlp = {
     enable = true;

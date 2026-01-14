@@ -13,8 +13,6 @@
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "polkit-agent-helper-1"
         "systemctl start --user polkit-gnome-authentication-agent-1"
-        "noctalia-shell"
-        "pkill waybar"
       ];
 
       exec = [

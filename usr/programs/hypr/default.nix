@@ -47,10 +47,8 @@
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$fileManager" = "nautilus --new-window";
-      #"$powermenu" = "rofi -show power-menu -modi power-menu:~/nixos-config/usr/programs/rofi/power-menu";
-      "$powermenu" = "noctalia-shell ipc call sessionMenu toggle";
-      #"$menu" = "rofi -show drun";
-      "$menu" = "noctalia-shell ipc call launcher toggle";
+      "$powermenu" = "rofi -show power-menu -modi power-menu:~/nixos-config/usr/programs/rofi/power-menu";
+      "$menu" = "rofi -show drun";
 
       # Input configuration
       input = {

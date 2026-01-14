@@ -19,7 +19,6 @@
       display-drun = " Apps ";
       display-combi = " Combi ";
       display-run = " Run ";
-      
       display-window = "Window";
       sidebar-mode = true;
     };

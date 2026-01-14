@@ -1,7 +1,7 @@
 {settings, config, pkgs, ... }:
 
 {
-    programs.hyprlock.enable = false;
+    programs.hyprlock.enable = true;
     programs.hyprlock.settings = {
         path = "screenshot";
         general = {
@@ -40,7 +40,7 @@
 label {
     monitor =
     text = cmd[update:1000] echo "<b><big> $(date +"%H:%M:%S") </big></b>"
-  #  color = "rgba(87, 82, 121, 1)";
+  #  color = "#${config.lib.stylix.colors.base05}";
 
     font_size = 64
     font_family = Inter 10
@@ -53,7 +53,7 @@ label {
 label {
     monitor =
     text = cmd[update:18000000] echo "$(date +'%A, %-d %B %Y')"
-  #  color = "rgba(87, 82, 121, 1)";
+  #  color = "#${config.lib.stylix.colors.base05}";
 
     font_size = 24
     font_family = Inter 10

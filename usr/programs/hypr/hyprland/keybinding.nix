@@ -14,11 +14,13 @@
         "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating,"
         "$mainMod, F, fullscreen, 0"
+
         "$mainMod, D, exec, $menu"
         "$mainMod, C, exec, rofi -show calc"
         "$mainMod,Tab, exec, rofi -show window"
-
+        "$mainMod, Y, exec, cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"
         "$mainMod, period, exec, rofimoji --action copy"
+
         # "$mainMod, TAB, exec, $windowMenu"
         "$mainMod, M, fullscreen, 1"
         "$mainMod, P, pseudo,"

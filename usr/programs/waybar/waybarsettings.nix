@@ -6,7 +6,7 @@
         layer = "top";
         position = "top";
         spacing = 0;
-        height = 22;
+        height = 25;
         modules-left = [
           "hyprland/workspaces"
         ];
@@ -16,11 +16,11 @@
         modules-right = [
           # "custom/dropbox"
           "custom/weather"
+          "cpu"
           "memory"
-          "keyboard-state"
+          #"keyboard-state"
           "bluetooth"
           "network"
-          #"cpu"
           #"tray"
           "wireplumber"
           "custom/notification"
@@ -31,33 +31,29 @@
           format = "{icon}";
           format-icons = {
             default = "";
-            "1" = "一";
-            "2" = "二";
-            "3" = "三";
-            "4" = "4";
+            "1" = "󰄛";
+            "2" = "";
+            "3" = "";
+            "4" = "󰨞";
             "5" = "5";
             "6" = "6";
             "7" = "7";
             "8" = "8";
             "9" = "9";
-            "10" = "";
+            "10" = "";
             #active = "󰯉";
           };
           persistent-workspaces = {
             "*" = 1;
           };
         };
-        cpu = {
-          interval = 5;
-          format = "󰍛";
-          on-click = "ghostty -e btop";
-        };
+
         clock = {
           interval = 1;
-          format = "{:%d %B %H%M%S}";
+          format = "{:%H:%M:%S  •  %d/%m/%y}";
           format-alt = "{:%A W%V %Y}";
           # Tooltip showing the calendar with some colors
-          tooltip-format = "<span>{calendar}</span>";
+          tooltip-format = "<span font='JetBrainsMono NFP'>{calendar}</span>";
           calendar = {
               mode = "month";
               mode-mon-col = 3;
@@ -183,9 +179,15 @@
         };    
 
         "memory" = {
-          interval = 30;
+          interval = 15;
           format = " {}%";
           max-length = 10;
+          on-click = "kitty -e btop";
+        };
+        
+        "cpu" = {
+          interval = 15;
+          format = "󰍛 {usage}%";
           on-click = "kitty -e btop";
         };
         # "custom/dropbox" = {

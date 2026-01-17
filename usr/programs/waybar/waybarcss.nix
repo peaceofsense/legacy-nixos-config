@@ -17,36 +17,36 @@
   +
   ''
     * {
-      font-family: "JetBrainsMono NFP";
-      font-size: 14px;
-      min-height: 0;
-    }
+        font-family: "UbuntuSans NFP Medium";
+        font-size: 15px;
+        min-height: 0;
+      }
 
     #waybar {
-      /*background: rgba(0, 0, 0, 0.3);
-      background: @base00;       Default Background */
+      background: alpha(@base00, 0.9); /* Blur */
       color: @base05;            /* Default Foreground */
-      margin: 5px 5px;
+      /* margin: 5px 5px; */
       border-radius: 0px;
       /* border: 1px solid @base01; Lighter Background */
     }
 
     #workspaces {
-      margin: 5px 1rem;
+      margin: 0px 1rem;
     }
 
     #workspaces button {
       background: transparent;
       color: @base06;            /* Light Foreground */
-      padding: 4px 8px;
-      margin: 2px;
+      padding: 0px 6px;
+      margin: 0px;
       border-radius: 6px;
+      border: 2px solid transparent;
     }
 
     #workspaces button.active {
-      background: @base01;       /* Lighter Background */
+      /* background: @base01;        Lighter Background */
       color: @base0B;            /* Strings/Inherited Class = Green */
-      border: 2px solid @base0B;
+      border: 0.09rem solid @base0B;
     }
 
     #workspaces button:hover {
@@ -57,7 +57,7 @@
     #hyprland-workspaces {
       background-color: @base00; /* Default Background */
       border-radius: 10px;
-      padding: 4px;
+      padding: 0px;
       margin: 5px;
     }
 
@@ -135,11 +135,12 @@
     }
 
     #clock {
-      font-family: "Fira Code Nerd Font", monospace;
+      /* font-family: "JetBrainsMono NFP"; */
       color: @base05;            /* Blue */
       margin: 0 8px;
-      padding: 0 10px;
+      padding: 0 5px;
     }
+
 
     #custom-music {
       color: @base0F;            /* Pink */
@@ -165,7 +166,6 @@
 
 
     #custom-notification {
-      font-size: 16px;
       margin-right: 8px;
       margin-left: 4px;
       color: @base08;            /* Dark Foreground */
@@ -181,7 +181,6 @@
     }
 
     #custom-nixicon {
-      font-size: 20px;
       color: @base09;            /* Orange/Peach */
       margin: 0 8px;
     }

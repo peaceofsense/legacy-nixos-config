@@ -3,13 +3,15 @@
   description = "yes";
 
   inputs = {
-    nixpkgsStable.url = "nixpkgs/nixos-25.05"; # Change this to update version
+    nixpkgsStable.url = "nixpkgs/nixos-25.11"; # Change this to update version
     nixpkgsUnstable.url = "nixpkgs/nixos-unstable";
     stylix = {
-      url = "github:nix-community/stylix/release-25.05";
+      url = "github:nix-community/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgsStable";
+
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
     solaar = {
@@ -22,6 +24,10 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
+    #apple-nerd-fonts = {
+    #  url= "github:gstand/apple-nerd-fonts";
+    #  inputs.nixpkgs.follows = "nixpkgsUnstable";
+    #};
 
     
   };

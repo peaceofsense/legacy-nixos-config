@@ -3,8 +3,7 @@
 {
 
   # Enable the GNOME Desktop Environment.
-  services.xserver = {
-    enable = true;
+  services = {
     desktopManager.gnome.enable = false; # Disable full GNOME
     displayManager.gdm.enable = false;
 
@@ -28,7 +27,7 @@
 
         default_session = {
           # Again here just change "-cmd Hyprland" to "-cmd your-start-command".
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --remember --remember-user-session --time --cmd Hyprland";
+          command = "${pkgs.tuigreet}/bin/tuigreet --asterisks --remember --remember-user-session --time --cmd Hyprland";
           # DO NOT CHANGE THIS USER
           user = "greeter";
         };

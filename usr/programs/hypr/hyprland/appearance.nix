@@ -9,10 +9,16 @@
         gaps_out = 2;
         border_size = 2;
 
-         # active_border = "rgba(FF4500ee) rgba(00FFFFee) rgba(FFD700ee) rgba(8A2BE2ee) 45deg";
-         # inactive_border = "rgba(000000aa)";
-        "col.inactive_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base00})";
-        "col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base08})";
+        # VIBGYOR
+        #"col.active_border" = lib.mkForce "rgba(FF4500ee) rgba(00FFFFee) rgba(FFD700ee) rgba(8A2BE2ee) 45deg";
+        
+        # Current
+        "col.active_border" = lib.mkForce "rgba(e81b85ee)";
+        "col.inactive_border" = lib.mkForce "rgba(000000aa)";
+
+
+        #"col.inactive_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base00})";
+        #"col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base08})";
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
@@ -37,16 +43,16 @@
       };
 
       animations = {
-        enabled = false;
-        animation = [
-          "global, 1, 4, default"
-          "workspaces, 1, 5, default, slidefade 10%"
-          "windows, 1, 6, default, slide"
-          "windowsMove, 1, 3, default"
-          "fade, 1, 4, default"
-          "fadeSwitch, 1, 3, default"
-          "border, 1, 3, default"
-          "borderangle, 1, 4, default"
+        enabled = true;
+        animation = [ # 0 is OFF
+          "global, 0, 4, default"
+          "workspaces, 0, 5, default, slidefade 10%"
+          "windows, 0, 6, default, slide"
+          "windowsMove, 0, 3, default"
+          "fade, 0, 4, default"
+          "fadeSwitch, 0, 3, default"
+          "border, 1, 2, default"
+          "borderangle, 0, 50, default"
         ];
       };
 

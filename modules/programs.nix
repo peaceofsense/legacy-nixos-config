@@ -55,4 +55,6 @@
   programs.gamemode.enable = false;
 
   programs.dconf.enable = true;
+
+  programs.evince.enable = true; # PDF thumbnail
 }

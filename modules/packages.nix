@@ -28,7 +28,6 @@
     obsidian
     opentabletdriver
     pandoc
-    papers
     pdfarranger
     protonmail-desktop
     rnote libinput
@@ -62,6 +61,7 @@
     fastfetch
     feh
     fish
+    font-manager
     fzf
     fprintd
     nautilus
@@ -100,7 +100,7 @@
     ripgrep
     ripgrep-all
     rofimoji
-    rofi-wayland
+    rofi
     samba
     sl
     slurp
@@ -117,6 +117,7 @@
     usbutils
     wget
     wl-clipboard
+    cliphist
     xclip
     xdg-utils
     zip
@@ -155,19 +156,22 @@
     discord
     #ferdium
     #fractal
-    freerdp3
+    freerdp
     github-desktop
     kdePackages.kdeconnect-kde
     openconnect
     rdesktop
     remmina
     wsdd
-    kdePackages.xwaylandvideobridge #x11 to wayland screensharing
+    #kdePackages.xwaylandvideobridge #x11 to wayland screensharing
     zoom-us
 
     # Multimedia
     ffmpeg-full
+    ffmpeg-headless
+    ffmpegthumbnailer
     fswebcam
+    kooha
     libheif
     libraw
     ncspot
@@ -195,7 +199,6 @@
     xmrig
 
     # Miscellaneous
-    android-udev-rules
     android-tools
     cmatrix
     cowsay

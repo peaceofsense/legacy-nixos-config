@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  
 
   fonts = {
     packages = with pkgs; [
@@ -9,27 +10,20 @@
       material-design-icons
       emacs-all-the-icons-fonts
       roboto
-      google-fonts
-      work-sans
       corefonts
-      vistafonts
-      comic-neue
+      vista-fonts
       source-sans
       twemoji-color-font
-      comfortaa
       inter
       inter-nerdfont
-      lato
-      lexend
-      jost
       dejavu_fonts
       nerd-fonts.jetbrains-mono
+      nerd-fonts.symbols-only
+      nerd-fonts.ubuntu-sans
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
-      noto-fonts-emoji
-      jetbrains-mono
-      font-awesome_5
+      noto-fonts-color-emoji
     #  (nerdfonts.override {fonts = ["JetBrainsMono"];})
     ];
 

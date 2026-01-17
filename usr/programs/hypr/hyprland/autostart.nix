@@ -13,6 +13,8 @@
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "polkit-agent-helper-1"
         "systemctl start --user polkit-gnome-authentication-agent-1"
+        "wl-paste --type text --watch cliphist store" # Stores only text data
+        #"wl-paste --type image --watch cliphist store" # Stores only image data
       ];
 
       exec = [

@@ -5,7 +5,7 @@
   programs.rofi = {
     enable = true;
     plugins = [pkgs.rofimoji pkgs.rofi-calc pkgs.rofi-file-browser];
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;
     cycle = true;
     terminal = "kitty";
     extraConfig = {
@@ -26,7 +26,7 @@
 
       builtins.toFile "theme.rasi" ''
       * {
-          bg0:    ${base00}; // #1d2021 - Main background (very dark, perfect for deep contrast)
+          bg0:    ${base00}E6; // E6 - Blur 90% #1d2021 - Main background (very dark, perfect for deep contrast)
           bg1:    ${base01}; // #3c3836 - Slightly lighter, ideal for panels/input fields
           bg2:    ${base02}; // #504945 - Button background, secondary elements
           bg3:    ${base03}; // #665c54 - Borders, selected states, subtle dividers

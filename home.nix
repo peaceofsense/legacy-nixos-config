@@ -254,17 +254,16 @@
     };
 
     programs.git = {
-    enable = true;
+        enable = true;
 
-    userName = "peaceofsense";
-    userEmail = "72244031+peaceofsense@users.noreply.github.com";
-
-    extraConfig = {
-        "filter \"lfs\"".clean = "git-lfs clean -- %f";
-        "filter \"lfs\"".smudge = "git-lfs smudge -- %f";
-        "filter \"lfs\"".process = "git-lfs filter-process";
-        "filter \"lfs\"".required = "true";
-    };
+        settings = {
+            user.email = "72244031+peaceofsense@users.noreply.github.com";
+            user.name = "peaceofsense";
+            "filter \"lfs\"".clean = "git-lfs clean -- %f";
+            "filter \"lfs\"".smudge = "git-lfs smudge -- %f";
+            "filter \"lfs\"".process = "git-lfs filter-process";
+            "filter \"lfs\"".required = "true";
+        };
     };
 
 
@@ -305,6 +304,12 @@
         iconTheme.package = pkgs.papirus-icon-theme;
         iconTheme.name = "Papirus-Dark";
 
+        gtk3.bookmarks = [
+            "file://${config.home.homeDirectory}/my-files my-files"
+            "file://${config.xdg.userDirs.download} Downloads"
+            "file://${config.xdg.userDirs.documents} Documents"
+            "file://${config.xdg.userDirs.pictures} Pictures"
+        ];
 
         gtk3.extraConfig = {
             gtk-application-prefer-dark-theme = ''
@@ -320,10 +325,8 @@
     
     xdg.enable = true;
     xdg.userDirs = {
-        extraConfig = {
-        XDG_GAME_DIR = "${config.home.homeDirectory}/Media/Games";
-        XDG_GAME_SAVE_DIR = "${config.home.homeDirectory}/Media/Game Saves";
-        };
+        enable = true;
+        createDirectories = true;
     };
 
     imports = [

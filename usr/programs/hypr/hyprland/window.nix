@@ -5,7 +5,7 @@
     # Window rules v2
     windowrulev2 = [
       "workspace 10, title:Spotify Premium"
-      "workspace 10, class:(obsidian)"
+      "workspace 1, class:(obsidian)"
       #"workspace 2, class:(zen)"
       #"workspace 2, class:(firefox)"
       "workspace 7, class:(steam)"

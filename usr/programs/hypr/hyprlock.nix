@@ -56,7 +56,7 @@ label {
   #  color = "#${config.lib.stylix.colors.base05}";
 
     font_size = 24
-    font_family = Inter 10
+    font_family = Inter Nerd Font Medium
 
     position = 0, -60
     halign = center
@@ -69,7 +69,7 @@ label {
     text = cmd[update:18000000] echo "<b>Feels like<big> $(curl -s 'wttr.in?format=%t' | tr -d '+') </big></b>"
   #  color = $color7
     font_size = 10
-    font_family = JetBrainsMono Nerd Font  
+    font_family = JetBrainsMono NF  
 
     position = 0, 40
     halign = center

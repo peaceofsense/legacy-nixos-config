@@ -20,6 +20,7 @@
     hunspellDicts.de_DE
 
     # Office and Productivity
+    blanket
     fiji
     gnome-clocks
     jabref
@@ -30,6 +31,8 @@
     pandoc
     pdfarranger
     protonmail-desktop
+    rclone
+    rclone-ui
     rnote libinput
     slack
     syncthing
@@ -90,8 +93,11 @@
     libtiff
     lm_sensors
     loupe
+    nemo
     neovim
     networkmanager
+    ocrmypdf
+    overskride
     pamixer
     parted
     polkit_gnome
@@ -188,6 +194,7 @@
 
     # Security & Privacy
     bleachbit
+    eduvpn-client
     gnome-obfuscate
     nftables
     proton-pass

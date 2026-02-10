@@ -21,7 +21,7 @@
           #"keyboard-state"
           "bluetooth"
           "network"
-          #"tray"
+          "tray"
           "wireplumber"
           "custom/notification"
           "battery"
@@ -31,16 +31,16 @@
           format = "{icon}";
           format-icons = {
             default = "";
-            "1" = "󰄛";
-            "2" = "";
+            "1" = "";
+            "2" = "󰖟";
             "3" = "";
-            "4" = "󰨞";
+            "4" = "";
             "5" = "5";
             "6" = "6";
             "7" = "7";
             "8" = "8";
             "9" = "9";
-            "10" = "";
+            "10" = "";
             #active = "󰯉";
           };
           persistent-workspaces = {

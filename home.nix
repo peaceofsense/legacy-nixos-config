@@ -304,12 +304,15 @@
         iconTheme.package = pkgs.papirus-icon-theme;
         iconTheme.name = "Papirus-Dark";
 
+        /*
         gtk3.bookmarks = [
             "file://${config.home.homeDirectory}/my-files my-files"
             "file://${config.xdg.userDirs.download} Downloads"
             "file://${config.xdg.userDirs.documents} Documents"
             "file://${config.xdg.userDirs.pictures} Pictures"
+            "file:///mnt/mega MEGA"
         ];
+        */
 
         gtk3.extraConfig = {
             gtk-application-prefer-dark-theme = ''

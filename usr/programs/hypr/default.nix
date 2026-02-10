@@ -22,7 +22,7 @@
         # Monitor left
         "DP-1,1920x1080@60,0x0,1"
         #"HDMI-A-2,1920x1080@60,0x0,1"
-        "eDP-1,1920x1080,1920x200,1.2"
+        "eDP-1,1920x1080,1920x200,1.5"
 
 
         # MOnitor right
@@ -46,7 +46,8 @@
       # Program variables
       "$mainMod" = "SUPER";
       "$terminal" = "kitty";
-      "$fileManager" = "nautilus --new-window";
+      #"$fileManager" = "nautilus --new-window";
+      "$fileManager" = "nemo";
       "$powermenu" = "rofi -show power-menu -modi power-menu:~/nixos-config/usr/programs/rofi/power-menu";
       "$menu" = "rofi -show drun";
 
@@ -65,10 +66,10 @@
       };
 
       # Gestures configuration
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-      };
+      "gesture" = "3, horizontal, workspace";
+      #"gesture" = "3, down, mod: ALT, close";
+      #gesture = 3, up, mod: SUPER, scale: 1.5, fullscreen
+      #gesture = 3, left, scale: 1.5, float
 
       # Per-device input configs (as a list of attribute sets)
       device = [

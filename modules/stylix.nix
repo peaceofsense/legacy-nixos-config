@@ -6,10 +6,10 @@
         stylix.polarity = "dark";         # Affects calander and wttr module
         # Optional: use a base16 color scheme
         #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-        stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/darcula.yaml";
+        #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/darcula.yaml";
         
         # similar
-        #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+        stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
         #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
         # light

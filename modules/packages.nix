@@ -23,7 +23,6 @@
     blanket
     fiji
     gnome-clocks
-    jabref
     libreoffice-fresh
     localsend
     obsidian
@@ -37,7 +36,6 @@
     slack
     syncthing
     texliveFull
-    texstudio
     thunderbird
     #xournalpp
     zotero

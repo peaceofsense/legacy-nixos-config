@@ -16,7 +16,6 @@
     };
     solaar = {
       url = "https://flakehub.com/f/Svenum/Solaar-Flake/*.tar.gz"; # For latest stable version
-      #url = "https://flakehub.com/f/Svenum/Solaar-Flake/0.1.1.tar.gz"; # uncomment line for solaar version 1.1.13
       #url = "github:Svenum/Solaar-Flake/main"; # Uncomment line for latest unstable version
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
@@ -24,10 +23,8 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgsStable";
     };
-    #apple-nerd-fonts = {
-    #  url= "github:gstand/apple-nerd-fonts";
-    #  inputs.nixpkgs.follows = "nixpkgsUnstable";
-    #};
+
+
 
     
   };
@@ -51,6 +48,9 @@
 
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
             home-manager.users.peaceofsense = import ./home.nix;
           }
 
@@ -64,6 +64,7 @@
         specialArgs = {
           inherit username;
           inherit pkgsUnstable;
+          inherit inputs;
         };
       };
 

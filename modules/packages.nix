@@ -94,6 +94,7 @@
     nemo
     neovim
     networkmanager
+    nix-search-tv
     ocrmypdf
     overskride
     pamixer

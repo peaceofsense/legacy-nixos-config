@@ -50,8 +50,8 @@
 
         clock = {
           interval = 1;
-          format = "{:%H:%M:%S  •  %d/%m/%y}";
-          format-alt = "{:%A W%V %Y}";
+          format = "{:%H:%M:%S}";
+          format-alt = "{:%A W%V %d/%m/%y}";
           # Tooltip showing the calendar with some colors
           tooltip-format = "<span font='JetBrainsMono NFP'>{calendar}</span>";
           calendar = {

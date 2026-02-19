@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -13,6 +13,10 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+
+    plugins = [
+      pkgs.hyprlandPlugins.hyprscrolling
+    ];
 
     settings = {
       # Monitors
@@ -37,6 +41,14 @@
         #"eDP-1,1920x1080,320x1440,1"
       ];
 
+      # Plugin
+      plugin = {
+        hyprscrolling = {
+          fullscreen_on_one_column = true;
+          column_default_width = "onehalf";
+          column_widths = "onehalf twothirds one";
+       };
+      };
 
       # Triple monitor
       #monitor=DP-6,1920x1080@60,0x0,1

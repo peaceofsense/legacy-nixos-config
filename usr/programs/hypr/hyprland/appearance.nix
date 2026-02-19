@@ -21,7 +21,8 @@
         #"col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base08})";
         resize_on_border = false;
         allow_tearing = false;
-        layout = "dwindle";
+        # layout = "dwindle";
+        layout = "scrolling";
       };
 
       decoration = {

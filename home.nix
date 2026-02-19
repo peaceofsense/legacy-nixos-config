@@ -216,7 +216,7 @@
         alias rm='trash -v'
         alias gparted='sudo -E gparted'
         alias caffinate='systemd-inhibit sleep 100000'
-
+        alias ns="nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history"
 
         alias la='ls -Alh'                # show hidden files
         alias ls='ls -aFh --color=always' # add colors and file type extensions

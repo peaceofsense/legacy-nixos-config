@@ -14,5 +14,5 @@ This repository contains my personal NixOS configuration. It is built using **Ni
 └── usr/                     # [LEGACY] User-level configurations
     └── programs/            # App-specific settings (Hyprland, Kitty, VSCode)
 
-```bash
+### Rebuild
 sudo nixos-rebuild switch --flake .#monolith

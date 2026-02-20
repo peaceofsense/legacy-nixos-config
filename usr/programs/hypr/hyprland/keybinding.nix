@@ -19,7 +19,15 @@
         "$mainMod, C, exec, rofi -show calc"
         "$mainMod,Tab, exec, rofi -show window"
         "$mainMod, Y, exec, cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"
-        "$mainMod, period, exec, rofimoji --action copy"
+        "$mainMod+SHIFT, period, exec, rofimoji --action copy"
+
+        # Hyprscrolling
+        "ALT, period, layoutmsg, focus r"
+        "ALT, comma, layoutmsg, focus l"
+        "ALT, R, layoutmsg, colresize +conf"
+
+
+
 
         # "$mainMod, TAB, exec, $windowMenu"
         "$mainMod, M, fullscreen, 1"

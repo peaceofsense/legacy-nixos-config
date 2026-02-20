@@ -43,10 +43,13 @@
 
       # Plugin
       plugin = {
+
         hyprscrolling = {
+          focus_fit_method = 1;
+          follow_focus = false;
           fullscreen_on_one_column = true;
           column_default_width = "onehalf";
-          column_widths = "onehalf twothirds one";
+          column_widths = "0.5 1";
        };
       };
 

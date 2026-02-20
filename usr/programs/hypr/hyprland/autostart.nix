@@ -8,7 +8,7 @@
         "[workspace 8 silent] thunderbird"
         "hyprpaper"
         "swaync" # notification
-        #waybar
+        "waybar"
         # "hyprctl setcursor Bibata-Modern-Classic 24"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "polkit-agent-helper-1"

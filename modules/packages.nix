@@ -1,4 +1,4 @@
-{ pkgs, pkgsUnstable, ... }: {
+{ pkgs, pkgsUnstable, inputs, ... }: {
 
   # List packages installed in system profile.
 
